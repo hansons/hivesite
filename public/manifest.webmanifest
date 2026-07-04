@@ -1,0 +1,19 @@
+{
+  "name": "The Hive Communities",
+  "short_name": "The Hive",
+  "description": "A network of three small relational churches in Corvallis, Oregon.",
+  "start_url": "/",
+  "scope": "/",
+  "display": "standalone",
+  "orientation": "portrait-primary",
+  "background_color": "#fafaf7",
+  "theme_color": "#9ea615",
+  "icons": [
+    {
+      "src": "/favicon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any"
+    }
+  ]
+}

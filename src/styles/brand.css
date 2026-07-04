@@ -1,0 +1,96 @@
+@import "tailwindcss";
+
+/*
+  Hive Communities brand tokens.
+  Palette and organic-theme tokens lifted from the prospective PWA's brand guide
+  (see prospective-pwa/README.md L21-136). Authoritative until leadership signals
+  a refresh.
+
+  Tailwind 4 reads `@theme` blocks and exposes utilities like `bg-hive-green`,
+  `text-hive-purple`, etc. automatically — no tailwind.config.js needed.
+*/
+
+@theme {
+  /* Core palette */
+  --color-hive-green: #9ea615;
+  --color-hive-purple: #a6159f;
+  --color-hive-teal: #159fa6;
+  --color-hive-grey-light: #c2c2c2;
+  --color-hive-grey-dark: #5f6062;
+
+  /* Translucent variants for organic overlays */
+  --color-hive-green-translucent: rgb(158 166 21 / 0.15);
+  --color-hive-purple-translucent: rgb(166 21 159 / 0.15);
+  --color-hive-teal-translucent: rgb(21 159 166 / 0.15);
+
+  /* Organic radii — hand-tuned, not perfect circles */
+  --radius-smooth: 12px;
+  --radius-organic: 24px 16px 28px 14px;
+  --radius-blob: 60% 40% 55% 45% / 50% 60% 40% 50%;
+
+  /* Organic shadows */
+  --shadow-soft: 0 2px 8px rgb(0 0 0 / 0.05);
+  --shadow-medium: 0 4px 16px rgb(0 0 0 / 0.08);
+  --shadow-strong: 0 8px 32px rgb(0 0 0 / 0.12);
+
+  /* Nature-inspired gradients */
+  --gradient-forest: linear-gradient(135deg, #9ea615 0%, #5f6062 100%);
+  --gradient-sunset: linear-gradient(135deg, #a6159f 0%, #9ea615 100%);
+  --gradient-ocean: linear-gradient(135deg, #159fa6 0%, #5f6062 100%);
+
+  /* Typography stack — system font, no Google Fonts dependency */
+  --font-sans: "Inter", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  --font-display: "Inter", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+}
+
+/* Subtle organic background patterns. Used sparingly — too much feels chaotic. */
+.organic-bg {
+  background-image:
+    radial-gradient(circle at 20% 80%, var(--color-hive-green-translucent) 0%, transparent 50%),
+    radial-gradient(circle at 80% 20%, var(--color-hive-teal-translucent) 0%, transparent 50%);
+}
+
+.leaf-bg {
+  background-image: radial-gradient(circle at 30% 70%, var(--color-hive-green-translucent) 0%, transparent 60%);
+}
+
+.water-bg {
+  background-image: linear-gradient(180deg, transparent 0%, var(--color-hive-teal-translucent) 100%);
+}
+
+.mountain-bg {
+  background-image: linear-gradient(180deg, var(--color-hive-grey-light) 0%, transparent 50%);
+}
+
+/* Organic motion */
+@keyframes hive-grow {
+  from { transform: scale(1); }
+  to { transform: scale(1.03); }
+}
+
+@keyframes hive-sway {
+  0%, 100% { transform: rotate(-1deg); }
+  50% { transform: rotate(1deg); }
+}
+
+@keyframes hive-ripple {
+  0% { box-shadow: 0 0 0 0 var(--color-hive-teal-translucent); }
+  100% { box-shadow: 0 0 0 12px transparent; }
+}
+
+.grow-animation:hover { animation: hive-grow 0.3s ease-out forwards; }
+.sway-animation { animation: hive-sway 4s ease-in-out infinite; }
+.ripple-animation:focus-visible { animation: hive-ripple 1s ease-out; }
+
+/* Base body styling */
+body {
+  font-family: var(--font-sans);
+  color: var(--color-hive-grey-dark);
+  background: #fafaf7;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+* {
+  box-sizing: border-box;
+}

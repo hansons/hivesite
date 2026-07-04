@@ -1,0 +1,2913 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>The Hive Communities — Corvallis, Oregon</title>
+<meta name="description" content="The Hive Communities is a network of three micro churches in Corvallis, Oregon, cooperating to build Jesus communities, develop leaders, and share Jesus with the world." />
+<style>
+  :root {
+    --honey-deep:   #7a4a10;
+    --honey:        #d69a2f;
+    --honey-soft:   #f3d589;
+    --honey-wash:   #fdf6e4;
+    --ink:          #1f1a12;
+    --ink-soft:     #4a4234;
+    --line:         #e8dcbd;
+    --white:        #ffffff;
+    --green-tree:   #4e6b3a;
+    --spring:       #3b6b74;
+    --corpus:       #8b3b3b;
+  }
+  * { box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+  body {
+    margin: 0;
+    font-family: 'Georgia', 'Cambria', serif;
+    color: var(--ink);
+    background: var(--white);
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+  }
+  h1, h2, h3, h4, nav, .btn, .eyebrow {
+    font-family: 'Helvetica Neue', 'Arial', sans-serif;
+    letter-spacing: 0.01em;
+  }
+  h1 { font-size: clamp(2.2rem, 5vw, 3.6rem); line-height: 1.1; margin: 0 0 0.5rem; }
+  h2 { font-size: clamp(1.6rem, 3.2vw, 2.2rem); margin: 0 0 0.75rem; }
+  h3 { font-size: 1.25rem; margin: 0 0 0.4rem; }
+  a  { color: var(--honey-deep); text-decoration: none; }
+  a:hover { text-decoration: underline; }
+  .wrap { max-width: 1100px; margin: 0 auto; padding: 0 1.25rem; }
+  .eyebrow {
+    text-transform: uppercase;
+    font-size: 0.8rem;
+    letter-spacing: 0.15em;
+    color: var(--honey-deep);
+    margin-bottom: 0.5rem;
+    display: block;
+    font-weight: 600;
+  }
+
+  /* --- top bar --- */
+  header.top {
+    background: var(--white);
+    border-bottom: 1px solid var(--line);
+    position: sticky;
+    top: 0;
+    z-index: 20;
+  }
+  header.top .wrap {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+  }
+  .brand {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    font-weight: 700;
+    font-size: 1.25rem;
+    color: var(--ink);
+    font-family: 'Helvetica Neue', 'Arial', sans-serif;
+  }
+  .brand svg { flex: 0 0 auto; }
+  nav.primary ul {
+    list-style: none;
+    display: flex;
+    gap: 1.5rem;
+    margin: 0;
+    padding: 0;
+    font-size: 0.95rem;
+  }
+  nav.primary a {
+    color: var(--ink-soft);
+    font-weight: 500;
+  }
+  nav.primary a:hover { color: var(--honey-deep); text-decoration: none; }
+  @media (max-width: 720px) {
+    nav.primary ul { display: none; }
+  }
+
+  /* --- hero --- */
+  .hero {
+    background:
+      radial-gradient(circle at 20% 20%, rgba(214, 154, 47, 0.15), transparent 60%),
+      radial-gradient(circle at 80% 80%, rgba(214, 154, 47, 0.12), transparent 55%),
+      var(--honey-wash);
+    padding: 5rem 0 6rem;
+    position: relative;
+    overflow: hidden;
+  }
+  .hero .hex-field {
+    position: absolute;
+    inset: 0;
+    opacity: 0.12;
+    pointer-events: none;
+  }
+  .hero .wrap { position: relative; }
+  .hero p.lede {
+    max-width: 620px;
+    font-size: 1.15rem;
+    color: var(--ink-soft);
+    margin: 0.5rem 0 2rem;
+  }
+  .btn-row { display: flex; flex-wrap: wrap; gap: 0.75rem; }
+  .btn {
+    display: inline-block;
+    padding: 0.85rem 1.4rem;
+    border-radius: 999px;
+    font-weight: 600;
+    font-size: 0.95rem;
+    transition: transform 0.15s ease, box-shadow 0.15s ease;
+  }
+  .btn.primary {
+    background: var(--honey-deep);
+    color: var(--white);
+  }
+  .btn.primary:hover { transform: translateY(-1px); box-shadow: 0 6px 18px rgba(122, 74, 16, 0.25); text-decoration: none; }
+  .btn.secondary {
+    background: transparent;
+    color: var(--honey-deep);
+    border: 1.5px solid var(--honey-deep);
+  }
+  .btn.secondary:hover { background: var(--honey-deep); color: var(--white); text-decoration: none; }
+
+  /* --- section base --- */
+  section { padding: 4.5rem 0; }
+  section.alt { background: var(--honey-wash); }
+
+  /* --- mission trio --- */
+  .trio {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 2rem;
+    margin-top: 2rem;
+  }
+  .trio .cell {
+    text-align: center;
+    padding: 0 0.5rem;
+  }
+  .trio .icon {
+    width: 56px;
+    height: 56px;
+    margin: 0 auto 1rem;
+    display: block;
+  }
+
+  /* --- all-hive banner --- */
+  .all-hive {
+    background: linear-gradient(135deg, var(--honey-deep), var(--honey));
+    color: var(--white);
+    padding: 3rem 0;
+    text-align: center;
+  }
+  .all-hive h2 { color: var(--white); }
+  .all-hive p { max-width: 640px; margin: 0 auto; opacity: 0.95; }
+
+  /* --- verse of the day --- */
+  .verse-band { background: var(--honey-wash); text-align: center; padding: 3.25rem 0; }
+  .verse-band .wrap { max-width: 760px; }
+  .verse-fig { margin: 0; }
+  .verse-text {
+    font-size: clamp(1.3rem, 2.6vw, 1.7rem);
+    line-height: 1.5;
+    font-style: italic;
+    color: var(--ink);
+    margin: 0.4rem 0 1.1rem;
+  }
+  .verse-text::before { content: '\201C'; }
+  .verse-text::after  { content: '\201D'; }
+  .verse-text.jesus { color: var(--corpus); }   /* red-letter: the words of Jesus */
+  .verse-cite {
+    font-family: 'Helvetica Neue', 'Arial', sans-serif;
+    text-transform: uppercase;
+    letter-spacing: 0.12em;
+    font-size: 0.85rem;
+    font-weight: 600;
+    color: var(--honey-deep);
+  }
+  .verse-cite .jesus-tag {
+    display: block;
+    margin-top: 0.4rem;
+    font-size: 0.68rem;
+    letter-spacing: 0.18em;
+    color: var(--corpus);
+  }
+
+  .learn { display: inline-block; font-weight: 600; font-size: 0.92rem; }
+  .tbd {
+    color: #8a6d2e;
+    background: rgba(214, 154, 47, 0.15);
+    padding: 0.1rem 0.5rem;
+    border-radius: 4px;
+    font-size: 0.85rem;
+    font-family: 'Helvetica Neue', 'Arial', sans-serif;
+  }
+
+  /* --- freedom prayer --- */
+  .fp {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 3rem;
+    align-items: center;
+  }
+  @media (max-width: 780px) {
+    .fp { grid-template-columns: 1fr; }
+  }
+  .fp .copy p { color: var(--ink-soft); }
+  .fp-card {
+    background: var(--white);
+    border: 1px solid var(--line);
+    border-radius: 14px;
+    padding: 2rem;
+    box-shadow: 0 4px 20px rgba(31, 26, 18, 0.04);
+  }
+  .fp-card ul {
+    list-style: none;
+    padding: 0;
+    margin: 1rem 0 1.5rem;
+  }
+  .fp-card li {
+    padding: 0.4rem 0 0.4rem 1.5rem;
+    position: relative;
+  }
+  .fp-card li::before {
+    content: "◆";
+    color: var(--honey);
+    position: absolute;
+    left: 0;
+    top: 0.4rem;
+    font-size: 0.7rem;
+  }
+
+  /* --- give section --- */
+  .give-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1.5rem;
+    margin-top: 2rem;
+  }
+  .give-card {
+    background: var(--white);
+    border: 1px solid var(--line);
+    border-radius: 14px;
+    padding: 1.75rem;
+  }
+  .give-card h3 { color: var(--honey-deep); }
+  .funds {
+    margin-top: 2.5rem;
+    padding: 1.5rem 1.75rem;
+    background: var(--white);
+    border-left: 4px solid var(--honey);
+    border-radius: 8px;
+  }
+  .funds ul {
+    list-style: none;
+    padding: 0;
+    margin: 0.75rem 0 0;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+  }
+  .funds li {
+    background: var(--honey-wash);
+    padding: 0.35rem 0.9rem;
+    border-radius: 999px;
+    font-size: 0.88rem;
+    color: var(--honey-deep);
+    font-family: 'Helvetica Neue', 'Arial', sans-serif;
+    font-weight: 500;
+  }
+
+  /* --- contact --- */
+  .contact-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 3rem;
+  }
+  @media (max-width: 780px) {
+    .contact-grid { grid-template-columns: 1fr; }
+  }
+  form.contact {
+    background: var(--white);
+    padding: 2rem;
+    border-radius: 14px;
+    border: 1px solid var(--line);
+  }
+  form.contact label {
+    display: block;
+    font-size: 0.85rem;
+    font-family: 'Helvetica Neue', 'Arial', sans-serif;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    color: var(--ink-soft);
+    margin-bottom: 0.3rem;
+    font-weight: 600;
+  }
+  form.contact input,
+  form.contact textarea {
+    width: 100%;
+    padding: 0.75rem 1rem;
+    border: 1px solid var(--line);
+    border-radius: 8px;
+    font-family: inherit;
+    font-size: 1rem;
+    margin-bottom: 1.25rem;
+    background: var(--honey-wash);
+  }
+  form.contact textarea { min-height: 120px; resize: vertical; }
+  form.contact input:focus,
+  form.contact textarea:focus {
+    outline: 2px solid var(--honey);
+    outline-offset: 1px;
+    background: var(--white);
+  }
+
+  .contact-info h3 { color: var(--honey-deep); }
+  .contact-info dl {
+    display: grid;
+    grid-template-columns: 120px 1fr;
+    row-gap: 0.75rem;
+    margin: 1.25rem 0;
+    font-size: 1rem;
+  }
+  .contact-info dt {
+    color: var(--ink-soft);
+    font-family: 'Helvetica Neue', 'Arial', sans-serif;
+    font-size: 0.82rem;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    font-weight: 600;
+    padding-top: 0.15rem;
+  }
+  .contact-info dd { margin: 0; }
+
+  /* --- footer --- */
+  footer {
+    background: var(--ink);
+    color: #c9bfa8;
+    padding: 3rem 0 2rem;
+    font-size: 0.92rem;
+  }
+  footer .wrap {
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr;
+    gap: 2rem;
+  }
+  @media (max-width: 720px) {
+    footer .wrap { grid-template-columns: 1fr; }
+  }
+  footer h4 {
+    color: var(--white);
+    font-size: 0.85rem;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    margin: 0 0 0.75rem;
+  }
+  footer a { color: #e2d3a9; }
+  footer a:hover { color: var(--white); }
+  footer ul { list-style: none; padding: 0; margin: 0; }
+  footer li { padding: 0.15rem 0; }
+  .footer-bar {
+    border-top: 1px solid #3a3528;
+    margin-top: 2.5rem;
+    padding-top: 1.25rem;
+    text-align: center;
+    font-size: 0.82rem;
+    color: #8a8068;
+  }
+
+  /* --- admin bar (shown when signed in) --- */
+  .admin-bar {
+    background: var(--ink);
+    color: var(--honey-soft);
+    font-family: 'Helvetica Neue', 'Arial', sans-serif;
+    font-size: 0.9rem;
+  }
+  .admin-bar .wrap {
+    display: flex; align-items: center; justify-content: space-between;
+    gap: 1rem; padding: 0.6rem 1.25rem; flex-wrap: wrap;
+  }
+  .admin-bar .ab-actions { display: flex; gap: 0.6rem; }
+  .admin-bar button {
+    background: transparent; border: 1px solid #6b5a2e; color: var(--honey-soft);
+    border-radius: 999px; padding: 0.3rem 0.9rem; font: inherit; cursor: pointer;
+  }
+  .admin-bar button:hover { background: #3a3528; }
+
+  /* --- edit affordances --- */
+  .btn-edit {
+    align-self: flex-end;
+    background: var(--honey-wash); border: 1px solid var(--honey);
+    color: var(--honey-deep); border-radius: 999px; padding: 0.2rem 0.85rem;
+    font-family: 'Helvetica Neue', 'Arial', sans-serif; font-size: 0.78rem;
+    font-weight: 600; cursor: pointer; margin-bottom: 0.6rem;
+  }
+  .btn-edit:hover { background: var(--honey-soft); }
+
+  /* --- modals --- */
+  .modal {
+    display: none; position: fixed; inset: 0; z-index: 50;
+    background: rgba(31, 26, 18, 0.55);
+    align-items: center; justify-content: center; padding: 1.25rem;
+  }
+  .modal.open { display: flex; }
+  .modal-card {
+    background: var(--white); border-radius: 14px; padding: 2rem;
+    width: 100%; max-width: 460px; position: relative;
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+    max-height: 90vh; overflow-y: auto;
+  }
+  .modal-card h3 { margin-top: 0; }
+  .modal-note {
+    color: var(--ink-soft); font-size: 0.9rem; background: var(--honey-wash);
+    padding: 0.6rem 0.8rem; border-radius: 8px; border-left: 3px solid var(--honey);
+    margin: 0 0 0.5rem;
+  }
+  .modal-card label {
+    display: block; font-family: 'Helvetica Neue', 'Arial', sans-serif;
+    font-size: 0.8rem; text-transform: uppercase; letter-spacing: 0.08em;
+    color: var(--ink-soft); font-weight: 600; margin: 1rem 0 0.3rem;
+  }
+  .modal-card input, .modal-card textarea, .modal-card select {
+    width: 100%; padding: 0.7rem 0.9rem; border: 1px solid var(--line);
+    border-radius: 8px; font-family: inherit; font-size: 1rem; background: var(--honey-wash);
+  }
+  .modal-card textarea { resize: vertical; min-height: 60px; }
+  .modal-card input:focus, .modal-card textarea:focus, .modal-card select:focus {
+    outline: 2px solid var(--honey); outline-offset: 1px; background: var(--white);
+  }
+  .modal-card form .btn { margin-top: 1.5rem; }
+  .modal-x {
+    position: absolute; top: 0.75rem; right: 1rem; background: none; border: none;
+    font-size: 1.6rem; line-height: 1; color: var(--ink-soft); cursor: pointer;
+  }
+  .modal-x:hover { color: var(--ink); }
+
+  /* --- church detail (sub-page) --- */
+  .detail { padding: 3rem 0 5rem; }
+  .detail .back {
+    font-family: 'Helvetica Neue', 'Arial', sans-serif; font-size: 0.9rem;
+    font-weight: 600; display: inline-block; margin-bottom: 1.5rem;
+  }
+  .detail-band { height: 8px; width: 80px; border-radius: 999px; margin-bottom: 1.5rem; }
+  .detail-band.green  { background: var(--green-tree); }
+  .detail-band.spring { background: var(--spring); }
+  .detail-band.corpus { background: var(--corpus); }
+  .detail-desc { font-size: 1.2rem; color: var(--ink-soft); max-width: 640px; }
+  .detail-dl {
+    display: grid; grid-template-columns: 120px 1fr; row-gap: 0.85rem;
+    margin: 2rem 0; max-width: 560px; font-size: 1.05rem;
+  }
+  .detail-dl dt {
+    color: var(--ink-soft); font-family: 'Helvetica Neue', 'Arial', sans-serif;
+    font-size: 0.82rem; text-transform: uppercase; letter-spacing: 0.08em;
+    font-weight: 600; padding-top: 0.15rem;
+  }
+  .detail-dl dd { margin: 0; }
+  .btn-edit-lg { margin: 0.5rem 0 0; }
+  .detail-foot { margin-top: 2rem; }
+  .detail-sub { margin-top: 2rem; font-size: 1.1rem; }
+  .detail-leaders { max-width: 560px; }
+
+  /* --- Breeze sync simulation --- */
+  .ab-breeze { display: flex; align-items: center; gap: 0.5rem; font-size: 0.85rem; flex-wrap: wrap; }
+  .ab-breeze .dot {
+    width: 9px; height: 9px; border-radius: 50%; background: #5fbf6a;
+    display: inline-block; box-shadow: 0 0 0 3px rgba(95, 191, 106, 0.25);
+  }
+  .sync-badge {
+    display: inline-block; font-family: 'Helvetica Neue', 'Arial', sans-serif;
+    font-size: 0.72rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.06em;
+    color: var(--honey-deep); background: rgba(214, 154, 47, 0.15);
+    padding: 0.2rem 0.6rem; border-radius: 999px; vertical-align: middle;
+  }
+  .sync-badge::before { content: '●'; margin-right: 0.35rem; font-size: 0.6rem; }
+  .sync-badge.syncing::before { animation: pulse 1s infinite; }
+  .sync-badge.mini { font-size: 0.65rem; }
+  @keyframes pulse { 0%, 100% { opacity: 1; } 50% { opacity: 0.25; } }
+
+  .cal-list {
+    margin-top: 1.5rem; border: 1px solid var(--line); border-radius: 14px;
+    overflow: hidden; background: var(--white);
+  }
+  .cal-empty { padding: 2.5rem; text-align: center; color: var(--ink-soft); }
+  .cal-item {
+    display: flex; align-items: flex-start; gap: 1rem;
+    padding: 1rem 1.25rem; border-bottom: 1px solid var(--line);
+  }
+  .cal-item:last-child { border-bottom: none; }
+  .cal-date { flex: 0 0 110px; display: flex; flex-direction: column; }
+  .cal-dow { font-family: 'Helvetica Neue', 'Arial', sans-serif; font-weight: 700; font-size: 0.95rem; }
+  .cal-time { color: var(--ink-soft); font-size: 0.85rem; }
+  .cal-meta { flex: 1; display: flex; gap: 0.6rem; align-items: flex-start; }
+  .cal-dot { width: 12px; height: 12px; border-radius: 50%; flex: 0 0 auto; margin-top: 0.3rem; }
+  .cal-title { font-weight: 600; }
+  .cal-loc { color: var(--ink-soft); font-size: 0.9rem; }
+  .cal-tag {
+    flex: 0 0 auto; color: #fff; font-family: 'Helvetica Neue', 'Arial', sans-serif;
+    font-size: 0.7rem; font-weight: 600; padding: 0.2rem 0.6rem; border-radius: 999px; align-self: center;
+  }
+  .cal-dot.green,  .cal-tag.green,  .leader-band.green  { background: var(--green-tree); }
+  .cal-dot.spring, .cal-tag.spring, .leader-band.spring { background: var(--spring); }
+  .cal-dot.corpus, .cal-tag.corpus, .leader-band.corpus { background: var(--corpus); }
+  .cal-dot.all,    .cal-tag.all,    .leader-band.all    { background: var(--honey); }
+  .cal-dot.hive,   .cal-tag.hive,   .leader-band.hive   { background: #8a6d2e; }
+  @media (max-width: 600px) { .cal-tag { display: none; } .cal-date { flex-basis: 92px; } }
+
+  .leader-band { height: 5px; width: 48px; border-radius: 999px; margin-bottom: 0.85rem; }
+  .leader-person { padding: 0.5rem 0; border-top: 1px solid var(--line); display: flex; flex-direction: column; }
+  .leader-person:first-of-type { border-top: none; }
+  .leader-name { font-weight: 600; }
+  .leader-role {
+    color: var(--ink-soft); font-size: 0.85rem; font-family: 'Helvetica Neue', 'Arial', sans-serif;
+  }
+  .leader-mail { font-size: 0.85rem; }
+  .sim-note {
+    margin-top: 1.5rem; font-size: 0.85rem; color: var(--ink-soft);
+    background: var(--honey-wash); border-left: 3px solid var(--honey);
+    padding: 0.6rem 0.9rem; border-radius: 8px;
+  }
+
+  .conn-row { display: flex; align-items: center; gap: 0.75rem; padding: 0.75rem 0; border-bottom: 1px solid var(--line); }
+  .conn-row:last-child { border-bottom: none; }
+  .conn-bar { width: 6px; height: 28px; border-radius: 3px; flex: 0 0 auto; }
+  .conn-main { flex: 1; }
+  .conn-name { font-weight: 600; }
+  .conn-sub { color: var(--ink-soft); font-size: 0.82rem; }
+  .conn-ok { color: #3f9a4a; font-weight: 600; font-size: 0.85rem; font-family: 'Helvetica Neue', 'Arial', sans-serif; }
+
+  /* --- suggest-an-event + manager review flow --- */
+  .cal-head-row { display: flex; align-items: flex-end; justify-content: space-between; gap: 1rem; flex-wrap: wrap; }
+  .btn-suggest {
+    background: var(--honey-deep); color: var(--white); border: none;
+    border-radius: 999px; padding: 0.6rem 1.2rem;
+    font-family: 'Helvetica Neue', 'Arial', sans-serif; font-weight: 600; font-size: 0.9rem;
+    cursor: pointer; transition: transform 0.15s ease, box-shadow 0.15s ease; white-space: nowrap;
+  }
+  .btn-suggest:hover { transform: translateY(-1px); box-shadow: 0 6px 18px rgba(122, 74, 16, 0.25); }
+  .cal-flag {
+    font-family: 'Helvetica Neue', 'Arial', sans-serif; font-size: 0.62rem; font-weight: 700;
+    text-transform: uppercase; letter-spacing: 0.06em; color: var(--honey-deep);
+    background: rgba(214, 154, 47, 0.18); padding: 0.1rem 0.45rem; border-radius: 999px; margin-left: 0.4rem;
+    vertical-align: middle;
+  }
+
+  /* --- Facebook → event detection + intake --- */
+  .fb-evt-badge { display: inline-block; font-family: 'Helvetica Neue','Arial',sans-serif; font-size: 0.6rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.05em; color: #fff; background: var(--spring); padding: 0.08rem 0.45rem; border-radius: 999px; margin-left: auto; align-self: center; }
+  .review-src { display: inline-block; font-family: 'Helvetica Neue','Arial',sans-serif; font-size: 0.6rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.05em; color: #fff; background: var(--spring); padding: 0.08rem 0.45rem; border-radius: 999px; margin-left: 0.4rem; vertical-align: middle; }
+  .review-src.member { background: #8a6d2e; }
+  .fb-cand { border: 1px solid var(--line); border-radius: 10px; padding: 0.9rem 1rem; margin-bottom: 0.85rem; background: var(--honey-wash); }
+  .fb-cand h4 { margin: 0 0 0.35rem; font-size: 1.02rem; }
+  .fb-cand .src { display: inline-block; font-family: 'Helvetica Neue','Arial',sans-serif; font-size: 0.6rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.05em; color: #fff; padding: 0.08rem 0.5rem; border-radius: 999px; vertical-align: middle; }
+  .fb-cand .src.high { background: #3f9a4a; }
+  .fb-cand .src.medium { background: #c08a2e; }
+  .fb-quote { font-size: 0.88rem; color: var(--ink-soft); font-style: italic; margin: 0.3rem 0 0.7rem; border-left: 3px solid var(--line); padding-left: 0.7rem; }
+
+  /* --- push calendar event TO Facebook (comms assistant, write path) --- */
+  .cal-right { display: flex; flex-direction: column; align-items: flex-end; gap: 0.4rem; flex: 0 0 auto; }
+  .cal-push { font-family: 'Helvetica Neue','Arial',sans-serif; font-size: 0.72rem; font-weight: 600; cursor: pointer; border-radius: 999px; padding: 0.25rem 0.7rem; border: 1px solid var(--spring); background: var(--white); color: var(--spring); white-space: nowrap; }
+  .cal-push:hover { background: var(--spring); color: #fff; }
+  .cal-push.done { border-color: #3f9a4a; color: #3f9a4a; }
+  .cal-push.done:hover { background: #3f9a4a; color: #fff; }
+  .push-target { font-size: 0.92rem; margin-bottom: 0.75rem; }
+  .push-actions { display: flex; gap: 0.5rem; flex-wrap: wrap; margin: 0.75rem 0; }
+  .push-actions .btn { font-size: 0.85rem; padding: 0.5rem 0.9rem; }
+  .push-steps { font-size: 0.88rem; color: var(--ink-soft); padding-left: 1.1rem; margin: 0.5rem 0 1rem; }
+  .push-steps li { margin: 0.25rem 0; }
+  .push-mark { border-top: 1px solid var(--line); padding-top: 1rem; display: flex; align-items: center; gap: 0.75rem; flex-wrap: wrap; }
+  .push-done { color: #3f9a4a; font-weight: 600; font-family: 'Helvetica Neue','Arial',sans-serif; font-size: 0.9rem; }
+
+  /* --- clickable calendar events (open detail) --- */
+  .cal-item[data-ev] { cursor: pointer; transition: background 0.12s ease; }
+  .cal-item[data-ev]:hover { background: var(--honey-wash); }
+  .cal-chip[data-ev] { cursor: pointer; }
+  .cal-chip[data-ev]:hover { filter: brightness(0.92); }
+  .evd-head { display: flex; align-items: center; gap: 0.6rem; margin-bottom: 0.25rem; }
+  .evd-dl { display: grid; grid-template-columns: 80px 1fr; row-gap: 0.5rem; margin: 1.25rem 0; font-size: 1rem; }
+  .evd-dl dt { color: var(--ink-soft); font-family: 'Helvetica Neue','Arial',sans-serif; font-size: 0.8rem; text-transform: uppercase; letter-spacing: 0.06em; font-weight: 600; padding-top: 0.15rem; }
+  .evd-dl dd { margin: 0; }
+  .evd-desc { color: var(--ink-soft); }
+
+  /* --- share to WhatsApp (write path, comms assistant) --- */
+  .btn.wa { background: #25D366; color: #0b3d1f; border: none; }
+  .btn.wa:hover { background: #1da851; color: #fff; text-decoration: none; }
+  .cal-share { font-family: 'Helvetica Neue','Arial',sans-serif; font-size: 0.72rem; font-weight: 600; cursor: pointer; border-radius: 999px; padding: 0.25rem 0.7rem; border: 1px solid #1da851; background: var(--white); color: #1da851; white-space: nowrap; }
+  .cal-share:hover { background: #25D366; color: #0b3d1f; }
+
+  /* --- clickable giving funds → mission/ministry detail --- */
+  .funds li[data-fund] { cursor: pointer; transition: background 0.12s ease, color 0.12s ease; }
+  .funds li[data-fund]:hover { background: var(--honey); color: #fff; }
+  .funds li[data-fund]::after { content: ' ›'; opacity: 0.55; }
+  .fund-scope { display: inline-block; font-family: 'Helvetica Neue','Arial',sans-serif; font-size: 0.7rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.06em; color: #fff; padding: 0.1rem 0.5rem; border-radius: 999px; vertical-align: middle; margin-left: 0.5rem; }
+  .fund-scope.local { background: var(--green-tree); }
+  .fund-scope.global { background: var(--spring); }
+  .fund-scope.church { background: var(--corpus); }
+  .fund-scope.general { background: #8a6d2e; }
+  .fund-desc { color: var(--ink-soft); margin: 1rem 0; }
+  .fund-dl { display: grid; grid-template-columns: 110px 1fr; row-gap: 0.5rem; margin: 1rem 0; font-size: 0.95rem; }
+  .fund-dl dt { color: var(--ink-soft); font-family: 'Helvetica Neue','Arial',sans-serif; font-size: 0.78rem; text-transform: uppercase; letter-spacing: 0.06em; font-weight: 600; padding-top: 0.15rem; }
+  .fund-dl dd { margin: 0; }
+  .fund-confirm { font-size: 0.82rem; color: #8a6d2e; background: rgba(214,154,47,0.15); border-left: 3px solid var(--honey); padding: 0.5rem 0.75rem; border-radius: 6px; margin: 1rem 0 0; }
+  .pending-badge {
+    display: inline-block; min-width: 1.1rem; text-align: center; background: var(--honey);
+    color: var(--ink); border-radius: 999px; padding: 0 0.4rem; font-size: 0.75rem; font-weight: 700; margin-left: 0.4rem;
+  }
+  .review-item {
+    border: 1px solid var(--line); border-radius: 10px; padding: 0.9rem 1rem;
+    margin-bottom: 0.85rem; background: var(--honey-wash);
+  }
+  .review-item h4 { margin: 0 0 0.3rem; font-size: 1.02rem; }
+  .review-meta { font-size: 0.85rem; color: var(--ink-soft); margin: 0 0 0.5rem; }
+  .review-meta span { display: inline-block; margin-right: 0.85rem; }
+  .review-desc { font-size: 0.9rem; margin: 0 0 0.6rem; }
+  .review-sub { font-size: 0.78rem; color: var(--ink-soft); font-family: 'Helvetica Neue', 'Arial', sans-serif; margin: 0; }
+  .review-actions { display: flex; gap: 0.6rem; margin-top: 0.7rem; }
+  .review-actions button {
+    border-radius: 999px; padding: 0.35rem 1rem; font-family: 'Helvetica Neue', 'Arial', sans-serif;
+    font-size: 0.82rem; font-weight: 600; cursor: pointer; border: 1px solid transparent;
+  }
+  .btn-approve { background: #3f9a4a; color: #fff; }
+  .btn-approve:hover { background: #348040; }
+  .btn-decline { background: transparent; color: var(--corpus); border-color: var(--corpus); }
+  .btn-decline:hover { background: var(--corpus); color: #fff; }
+  .review-empty { padding: 1.75rem; text-align: center; color: var(--ink-soft); }
+
+  /* --- calendar view modes (list / week / month) --- */
+  .cal-controls { display: flex; align-items: center; justify-content: space-between; gap: 1rem; flex-wrap: wrap; margin: 0.5rem 0 1.25rem; }
+  .cal-views { display: inline-flex; border: 1px solid var(--line); border-radius: 999px; overflow: hidden; background: var(--white); }
+  .cal-views button {
+    border: none; background: transparent; padding: 0.45rem 1.05rem;
+    font-family: 'Helvetica Neue', 'Arial', sans-serif; font-size: 0.85rem; font-weight: 600;
+    color: var(--ink-soft); cursor: pointer;
+  }
+  .cal-views button + button { border-left: 1px solid var(--line); }
+  .cal-views button.active { background: var(--honey-deep); color: var(--white); }
+  .cal-nav { display: flex; align-items: center; gap: 0.5rem; }
+  .cal-nav button {
+    border: 1px solid var(--line); background: var(--white); border-radius: 8px;
+    width: 2rem; height: 2rem; font-size: 1.15rem; line-height: 1; cursor: pointer; color: var(--ink);
+    font-family: 'Helvetica Neue', 'Arial', sans-serif; display: inline-flex; align-items: center; justify-content: center;
+  }
+  .cal-nav button:hover { background: var(--honey-wash); }
+  .cal-today-btn { width: auto !important; padding: 0 0.85rem; font-size: 0.82rem !important; font-weight: 600; }
+  .cal-period { font-family: 'Helvetica Neue', 'Arial', sans-serif; font-weight: 700; font-size: 1rem; min-width: 9.5rem; text-align: center; }
+
+  .cal-grid-wrap { margin-top: 1.5rem; overflow-x: auto; }
+  .cal-grid {
+    display: grid; grid-template-columns: repeat(7, 1fr); gap: 1px;
+    background: var(--line); border: 1px solid var(--line); border-radius: 14px; overflow: hidden;
+  }
+  .cal-dow-head {
+    background: var(--white); text-align: center; font-family: 'Helvetica Neue', 'Arial', sans-serif;
+    font-size: 0.7rem; text-transform: uppercase; letter-spacing: 0.06em; color: var(--ink-soft);
+    font-weight: 700; padding: 0.5rem 0;
+  }
+  .cal-dow-head.today { color: var(--honey-deep); }
+  .cal-cell { background: var(--white); min-height: 104px; padding: 0.4rem 0.4rem 0.5rem; display: flex; flex-direction: column; gap: 0.22rem; }
+  .cal-cell.muted { background: var(--honey-wash); }
+  .cal-cell-num {
+    font-family: 'Helvetica Neue', 'Arial', sans-serif; font-size: 0.78rem; font-weight: 600; color: var(--ink-soft);
+    width: 1.6rem; height: 1.6rem; display: inline-flex; align-items: center; justify-content: center; align-self: flex-start;
+  }
+  .cal-cell.today .cal-cell-num { background: var(--honey-deep); color: #fff; border-radius: 50%; }
+  .cal-chip {
+    font-family: 'Helvetica Neue', 'Arial', sans-serif; font-size: 0.68rem; line-height: 1.3;
+    padding: 0.12rem 0.4rem; border-radius: 5px; color: #fff; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;
+  }
+  .cal-chip.green { background: var(--green-tree); }
+  .cal-chip.spring { background: var(--spring); }
+  .cal-chip.corpus { background: var(--corpus); }
+  .cal-chip.all { background: var(--honey); color: var(--ink); }
+  .cal-chip.hive { background: #8a6d2e; }
+  .cal-chip-time { font-weight: 700; margin-right: 0.25rem; }
+  .cal-more { font-size: 0.66rem; color: var(--ink-soft); font-family: 'Helvetica Neue', 'Arial', sans-serif; padding-left: 0.15rem; }
+  .cal-grid.week .cal-cell { min-height: 150px; }
+  .cal-grid.week .cal-cell.today { background: var(--honey-wash); }
+  .cal-grid.week .cal-chip { white-space: normal; }
+  @media (max-width: 640px) { .cal-grid { min-width: 600px; } }
+
+  /* --- Facebook aggregator feed (all four pages) --- */
+  .fb-feed {
+    display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 1.25rem; margin-top: 2rem;
+  }
+  .fb-post {
+    background: var(--white); border: 1px solid var(--line); border-top: 4px solid var(--line);
+    border-radius: 14px; padding: 1.1rem 1.25rem 1rem; display: flex; flex-direction: column;
+  }
+  .fb-post.green  { border-top-color: var(--green-tree); }
+  .fb-post.spring { border-top-color: var(--spring); }
+  .fb-post.corpus { border-top-color: var(--corpus); }
+  .fb-post.hive   { border-top-color: #8a6d2e; }
+  .fb-head { display: flex; align-items: center; gap: 0.7rem; margin-bottom: 0.7rem; }
+  .fb-avatar {
+    width: 38px; height: 38px; border-radius: 50%; flex: 0 0 auto;
+    display: flex; align-items: center; justify-content: center; color: #fff;
+    font-family: 'Helvetica Neue', 'Arial', sans-serif; font-weight: 700; font-size: 0.85rem;
+  }
+  .fb-avatar.green  { background: var(--green-tree); }
+  .fb-avatar.spring { background: var(--spring); }
+  .fb-avatar.corpus { background: var(--corpus); }
+  .fb-avatar.hive   { background: #8a6d2e; }
+  .fb-meta { display: flex; flex-direction: column; line-height: 1.25; }
+  .fb-page { font-family: 'Helvetica Neue', 'Arial', sans-serif; font-weight: 700; font-size: 0.92rem; color: var(--ink); }
+  .fb-time { color: var(--ink-soft); font-size: 0.78rem; font-family: 'Helvetica Neue', 'Arial', sans-serif; }
+  .fb-body { color: var(--ink-soft); font-size: 0.95rem; margin: 0 0 0.9rem; flex: 1; }
+  .fb-foot {
+    display: flex; align-items: center; gap: 1rem; border-top: 1px solid var(--line); padding-top: 0.7rem;
+    font-family: 'Helvetica Neue', 'Arial', sans-serif; font-size: 0.8rem;
+  }
+  .fb-stat { color: var(--ink-soft); }
+  .fb-link { margin-left: auto; font-weight: 600; }
+
+  /* --- communities accordion (churches + leaders + Facebook merged) --- */
+  .hive-wide { margin-top: 1.5rem; background: var(--white); border: 1px solid var(--line); border-left: 4px solid #8a6d2e; border-radius: 14px; padding: 1.25rem 1.5rem; }
+  .hive-wide-head { display: flex; align-items: center; gap: 0.85rem; margin-bottom: 1rem; }
+  .accordion { margin-top: 1.5rem; border: 1px solid var(--line); border-radius: 14px; overflow: hidden; background: var(--white); }
+  .acc-item { border-top: 1px solid var(--line); }
+  .acc-item:first-child { border-top: none; }
+  .acc-head { display: flex; align-items: center; gap: 0.85rem; width: 100%; text-align: left; background: var(--white); border: none; cursor: pointer; padding: 1.1rem 1.25rem; font-family: 'Helvetica Neue', 'Arial', sans-serif; color: var(--ink); }
+  .acc-head:hover { background: var(--honey-wash); }
+  .acc-band { width: 6px; height: 36px; border-radius: 3px; flex: 0 0 auto; }
+  .acc-band.green { background: var(--green-tree); }
+  .acc-band.spring { background: var(--spring); }
+  .acc-band.corpus { background: var(--corpus); }
+  .acc-band.hive, .hive-band { background: #8a6d2e; }
+  .acc-titles { flex: 1; display: flex; flex-direction: column; line-height: 1.3; }
+  .acc-name { font-weight: 700; font-size: 1.1rem; }
+  .acc-sub { color: var(--ink-soft); font-size: 0.9rem; }
+  .acc-chevron { color: var(--ink-soft); font-size: 1.1rem; transition: transform 0.2s ease; }
+  .acc-item.open .acc-chevron { transform: rotate(90deg); }
+  .acc-body { display: none; padding: 0 1.25rem 1.6rem; }
+  .acc-item.open .acc-body { display: block; }
+  .acc-body .tagline { color: var(--ink-soft); font-style: italic; margin: 0 0 1rem; }
+  .acc-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 2rem; margin-bottom: 1.25rem; }
+  @media (max-width: 780px) { .acc-grid { grid-template-columns: 1fr; gap: 1.25rem; } }
+  .acc-h { font-size: 0.82rem; text-transform: uppercase; letter-spacing: 0.08em; color: var(--ink-soft); margin: 0 0 0.6rem; }
+  .acc-dl { display: grid; grid-template-columns: 90px 1fr; row-gap: 0.35rem; font-size: 0.95rem; margin: 0 0 1rem; }
+  .acc-dl dt { color: var(--ink-soft); font-family: 'Helvetica Neue','Arial',sans-serif; font-size: 0.82rem; text-transform: uppercase; letter-spacing: 0.06em; padding-top: 0.15rem; }
+  .acc-dl dd { margin: 0; }
+
+  /* --- church subpage sections (deepened) --- */
+  .det-section { margin-top: 2.5rem; }
+  .det-section > h3.detail-sub { margin-top: 0; }
+  .det-section .sim-note { margin-top: 0.85rem; }
+
+  /* "This Sunday" compact card at the top of a church page */
+  .this-sunday {
+    display: grid; grid-template-columns: 1fr 1fr; gap: 1rem;
+    background: var(--honey-wash); border: 1px solid var(--line); border-left: 4px solid var(--honey);
+    border-radius: 12px; padding: 1.1rem 1.25rem; margin-top: 1.5rem;
+  }
+  @media (max-width: 640px) { .this-sunday { grid-template-columns: 1fr; } }
+  .this-sunday h4 {
+    margin: 0 0 0.3rem; font-family: 'Helvetica Neue','Arial',sans-serif;
+    font-size: 0.78rem; text-transform: uppercase; letter-spacing: 0.08em; color: var(--ink-soft);
+  }
+  .this-sunday .ts-main { font-weight: 600; font-size: 1.05rem; }
+  .this-sunday .ts-sub { color: var(--ink-soft); font-size: 0.92rem; }
+  .this-sunday a.ts-link {
+    display: inline-block; margin-top: 0.4rem;
+    font-family: 'Helvetica Neue','Arial',sans-serif; font-weight: 600; font-size: 0.88rem;
+  }
+
+  /* Upcoming-events compact list reuses .cal-list shell */
+  .det-cal { margin-top: 1rem; }
+  .det-cal .cal-empty { padding: 1.5rem; font-size: 0.95rem; }
+
+  /* Sermon archive */
+  .sermon-list {
+    margin-top: 1rem; border: 1px solid var(--line); border-radius: 14px;
+    overflow: hidden; background: var(--white);
+  }
+  .sermon-row {
+    display: flex; align-items: center; gap: 1rem;
+    padding: 0.9rem 1.1rem; border-bottom: 1px solid var(--line);
+  }
+  .sermon-row:last-child { border-bottom: none; }
+  .sermon-icon {
+    width: 38px; height: 38px; border-radius: 8px; flex: 0 0 auto;
+    display: flex; align-items: center; justify-content: center; color: #fff;
+    font-family: 'Helvetica Neue','Arial',sans-serif; font-weight: 700; font-size: 0.95rem;
+  }
+  .sermon-icon.video { background: #c0392b; }
+  .sermon-icon.audio { background: #2e7a8a; }
+  .sermon-meta { flex: 1; min-width: 0; }
+  .sermon-title { font-weight: 600; }
+  .sermon-sub {
+    color: var(--ink-soft); font-size: 0.85rem;
+    font-family: 'Helvetica Neue','Arial',sans-serif;
+  }
+  .sermon-cta {
+    flex: 0 0 auto; font-family: 'Helvetica Neue','Arial',sans-serif;
+    font-size: 0.82rem; font-weight: 600;
+    border: 1px solid var(--honey-deep); color: var(--honey-deep);
+    padding: 0.35rem 0.85rem; border-radius: 999px;
+  }
+  .sermon-cta:hover { background: var(--honey-deep); color: #fff; text-decoration: none; }
+
+  /* Bulletin / weekly */
+  .bull-card {
+    margin-top: 1rem; background: var(--white); border: 1px solid var(--line);
+    border-radius: 14px; padding: 1.25rem 1.5rem;
+  }
+  .bull-head { display: flex; align-items: baseline; justify-content: space-between; gap: 0.75rem; flex-wrap: wrap; }
+  .bull-date {
+    font-family: 'Helvetica Neue','Arial',sans-serif; font-size: 0.78rem;
+    text-transform: uppercase; letter-spacing: 0.08em; color: var(--ink-soft); font-weight: 600;
+  }
+  .bull-summary { color: var(--ink-soft); margin: 0.6rem 0 0.9rem; }
+  .bull-actions { display: flex; gap: 0.6rem; flex-wrap: wrap; }
+  .bull-actions .btn { padding: 0.55rem 1rem; font-size: 0.88rem; }
+
+  /* Facebook Page Plugin stand-in */
+  .fb-plugin {
+    margin-top: 1rem; border: 1px solid var(--line); border-radius: 14px; overflow: hidden;
+    background: var(--white);
+  }
+  .fb-plugin-head {
+    display: flex; align-items: center; gap: 0.7rem;
+    background: #1877F2; color: #fff; padding: 0.85rem 1.1rem;
+    font-family: 'Helvetica Neue','Arial',sans-serif;
+  }
+  .fb-plugin-head .fb-mark {
+    width: 24px; height: 24px; border-radius: 5px; background: #fff; color: #1877F2;
+    display: inline-flex; align-items: center; justify-content: center;
+    font-family: 'Helvetica Neue','Arial',sans-serif; font-weight: 800; font-size: 0.95rem;
+  }
+  .fb-plugin-head .fb-page-name { font-weight: 700; font-size: 0.95rem; }
+  .fb-plugin-head .fb-plugin-flag {
+    margin-left: auto; font-size: 0.7rem; text-transform: uppercase; letter-spacing: 0.06em;
+    background: rgba(255,255,255,0.18); padding: 0.18rem 0.55rem; border-radius: 999px; font-weight: 600;
+  }
+  .fb-plugin-body { padding: 1rem 1.1rem 1.25rem; }
+  .fb-plugin-foot {
+    border-top: 1px solid var(--line); padding: 0.7rem 1.1rem;
+    background: var(--honey-wash); font-size: 0.82rem; color: var(--ink-soft);
+    font-family: 'Helvetica Neue','Arial',sans-serif;
+    display: flex; align-items: center; justify-content: space-between; gap: 0.75rem; flex-wrap: wrap;
+  }
+  .fb-plugin-foot a { font-weight: 600; }
+  .fb-plugin .fb-feed { grid-template-columns: 1fr; }
+  .fb-plugin-pending {
+    padding: 1.25rem 0.25rem 0; color: var(--ink-soft); font-size: 0.92rem;
+    font-family: 'Helvetica Neue','Arial',sans-serif;
+  }
+  .fb-plugin-pending strong { color: var(--ink); }
+
+  /* Photo gallery */
+  .photo-grid {
+    display: grid; grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+    gap: 0.75rem; margin-top: 1rem;
+  }
+  .photo-tile {
+    aspect-ratio: 4 / 3; border-radius: 10px; position: relative; overflow: hidden;
+    border: 1px solid var(--line); display: flex; align-items: flex-end;
+  }
+  .photo-tile.green  { background: linear-gradient(135deg, #6f8c5b, #3d5429); }
+  .photo-tile.spring { background: linear-gradient(135deg, #4f8a93, #2c5961); }
+  .photo-tile.corpus { background: linear-gradient(135deg, #a85454, #6d2a2a); }
+  .photo-tile.hive   { background: linear-gradient(135deg, #c69a3a, #7a4a10); }
+  .photo-cap {
+    width: 100%; background: linear-gradient(transparent, rgba(0,0,0,0.55));
+    color: #fff; padding: 0.45rem 0.6rem 0.5rem;
+    font-family: 'Helvetica Neue','Arial',sans-serif; font-size: 0.78rem; font-weight: 500;
+  }
+  .photo-empty {
+    padding: 1.25rem; text-align: center; color: var(--ink-soft);
+    border: 1px dashed var(--line); border-radius: 10px; margin-top: 1rem;
+  }
+
+  /* Community board */
+  .board-list { margin-top: 1rem; display: flex; flex-direction: column; gap: 0.6rem; }
+  .board-item {
+    display: flex; gap: 0.85rem; padding: 0.85rem 1rem;
+    background: var(--white); border: 1px solid var(--line); border-radius: 10px;
+  }
+  .board-kind {
+    flex: 0 0 auto; align-self: flex-start; font-family: 'Helvetica Neue','Arial',sans-serif;
+    font-size: 0.62rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.06em;
+    padding: 0.15rem 0.55rem; border-radius: 999px; color: #fff; margin-top: 0.15rem;
+  }
+  .board-kind.prayer { background: var(--corpus); }
+  .board-kind.announce { background: var(--honey-deep); }
+  .board-kind.welcome { background: var(--green-tree); }
+  .board-body { flex: 1; }
+  .board-text { font-size: 0.95rem; }
+  .board-who {
+    color: var(--ink-soft); font-size: 0.78rem; margin-top: 0.2rem;
+    font-family: 'Helvetica Neue','Arial',sans-serif;
+  }
+
+  /* Per-church giving block */
+  .give-block {
+    margin-top: 1rem; display: grid; grid-template-columns: 1.4fr 1fr; gap: 1rem;
+    background: var(--white); border: 1px solid var(--line); border-radius: 14px;
+    padding: 1.25rem 1.5rem;
+  }
+  @media (max-width: 640px) { .give-block { grid-template-columns: 1fr; } }
+  .give-block .gv-copy h4 {
+    margin: 0 0 0.4rem; font-family: 'Helvetica Neue','Arial',sans-serif;
+    font-size: 0.78rem; text-transform: uppercase; letter-spacing: 0.08em; color: var(--ink-soft);
+  }
+  .give-block .gv-copy p { color: var(--ink-soft); margin: 0 0 0.85rem; }
+  .give-block .gv-actions { display: flex; flex-direction: column; gap: 0.5rem; align-items: flex-start; }
+  .give-block .gv-actions .btn { width: 100%; text-align: center; }
+  .gv-alt {
+    margin-top: 1rem; padding-top: 0.9rem; border-top: 1px dashed var(--line);
+    font-size: 0.88rem; color: var(--ink-soft); display: flex; gap: 0.4rem 1rem; flex-wrap: wrap;
+  }
+  .gv-alt a { font-family: 'Helvetica Neue','Arial',sans-serif; font-weight: 600; }
+</style>
+</head>
+<body>
+
+<div class="admin-bar" id="adminBar" hidden>
+  <div class="wrap">
+    <span><strong>Admin mode</strong> — prototype; edits save to this browser only</span>
+    <span class="ab-breeze">
+      <span class="dot"></span><span id="breezeStatus">Breeze: 3 churches connected</span>
+      <button type="button" id="syncNow">Sync now</button>
+      <button type="button" id="breezeConns">Connections</button>
+    </span>
+    <span class="ab-actions">
+      <button type="button" id="fbEventsBtn">Facebook events<span class="pending-badge" id="fbEventsCount" hidden>0</span></button>
+      <button type="button" id="reviewBtn">Event requests<span class="pending-badge" id="reviewCount" hidden>0</span></button>
+      <button type="button" id="resetDemo">Reset demo data</button>
+      <button type="button" id="signoutBtn">Sign out</button>
+    </span>
+  </div>
+</div>
+
+<header class="top">
+  <div class="wrap">
+    <a href="#top" class="brand">
+      <svg width="34" height="34" viewBox="0 0 40 40" aria-hidden="true">
+        <g fill="none" stroke="#7a4a10" stroke-width="1.5" stroke-linejoin="round">
+          <polygon points="20,13.5 25.63,16.75 25.63,23.25 20,26.5 14.37,23.25 14.37,16.75"/>
+          <polygon points="31.26,13.5 36.89,16.75 36.89,23.25 31.26,26.5 25.63,23.25 25.63,16.75"/>
+          <polygon points="8.74,13.5 14.37,16.75 14.37,23.25 8.74,26.5 3.11,23.25 3.11,16.75"/>
+          <polygon points="25.63,3.75 31.26,7 31.26,13.5 25.63,16.75 20,13.5 20,7"/>
+          <polygon points="14.37,3.75 20,7 20,13.5 14.37,16.75 8.74,13.5 8.74,7"/>
+          <polygon points="25.63,23.25 31.26,26.5 31.26,33 25.63,36.25 20,33 20,26.5"/>
+          <polygon points="14.37,23.25 20,26.5 20,33 14.37,36.25 8.74,33 8.74,26.5"/>
+        </g>
+      </svg>
+      The Hive Communities
+    </a>
+    <nav class="primary" aria-label="Primary">
+      <ul>
+        <li><a href="#about">About</a></li>
+        <li><a href="#communities">Communities</a></li>
+        <li><a href="#freedom-prayer">Freedom Prayer</a></li>
+        <li><a href="#calendar">Calendar</a></li>
+        <li><a href="#give">Give</a></li>
+        <li><a href="#contact">Contact</a></li>
+        <li><a href="#" id="signinLink">Sign in</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<main id="top">
+
+  <!-- HERO -->
+  <section class="hero" style="padding-top: 6rem;">
+    <svg class="hex-field" viewBox="0 0 800 400" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
+      <defs>
+        <pattern id="hex" x="0" y="0" width="60" height="52" patternUnits="userSpaceOnUse">
+          <polygon points="30,2 56,17 56,47 30,62 4,47 4,17" fill="none" stroke="#7a4a10" stroke-width="1"/>
+        </pattern>
+      </defs>
+      <rect width="800" height="400" fill="url(#hex)"/>
+    </svg>
+    <div class="wrap">
+      <span class="eyebrow">Corvallis, Oregon</span>
+      <h1>A family of micro churches<br/>on mission together.</h1>
+      <p class="lede">
+        The Hive is three local churches cooperating as one — a seedbed for healthy community,
+        godly leaders, and workers sent into Oregon and neglected places of the world.
+      </p>
+      <div class="btn-row">
+        <a href="#communities" class="btn primary">Find a community</a>
+        <a href="#about" class="btn secondary">What is a Hive?</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- VERSE OF THE DAY (rotates daily; see VERSES + renderVerse() in script) -->
+  <section id="verse" class="verse-band">
+    <div class="wrap">
+      <span class="eyebrow">Verse of the day</span>
+      <figure class="verse-fig">
+        <blockquote id="verseText" class="verse-text"></blockquote>
+        <figcaption id="verseCite" class="verse-cite"></figcaption>
+      </figure>
+    </div>
+  </section>
+
+  <!-- ABOUT / MISSION -->
+  <section id="about">
+    <div class="wrap">
+      <span class="eyebrow">Our calling</span>
+      <h2>Build. Develop. Send.</h2>
+      <p style="max-width: 720px; color: var(--ink-soft); font-size: 1.08rem;">
+        The Hive is called to develop healthy local churches with godly leaders. These churches
+        cooperate together as a seedbed and launching pad — to send workers and plant churches
+        in Oregon and neglected areas of the world.
+      </p>
+
+      <div class="trio">
+        <div class="cell">
+          <svg class="icon" viewBox="0 0 56 56" aria-hidden="true">
+            <circle cx="28" cy="28" r="24" fill="none" stroke="#7a4a10" stroke-width="2"/>
+            <path d="M18 32 L26 40 L40 22" fill="none" stroke="#7a4a10" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+          <h3>Jesus Communities</h3>
+          <p style="color: var(--ink-soft);">We gather weekly in small, local bodies where people are known, loved, and shaped by Christ.</p>
+        </div>
+        <div class="cell">
+          <svg class="icon" viewBox="0 0 56 56" aria-hidden="true">
+            <path d="M12 44 L28 14 L44 44 Z" fill="none" stroke="#7a4a10" stroke-width="2" stroke-linejoin="round"/>
+            <circle cx="28" cy="32" r="4" fill="#d69a2f"/>
+          </svg>
+          <h3>Leaders Raised Up</h3>
+          <p style="color: var(--ink-soft);">Every Hive church exists to develop the next generation of shepherds, teachers, and disciple-makers.</p>
+        </div>
+        <div class="cell">
+          <svg class="icon" viewBox="0 0 56 56" aria-hidden="true">
+            <circle cx="28" cy="28" r="22" fill="none" stroke="#7a4a10" stroke-width="2"/>
+            <path d="M8 28 L48 28 M28 8 Q42 28 28 48 Q14 28 28 8" fill="none" stroke="#7a4a10" stroke-width="2"/>
+          </svg>
+          <h3>Workers Sent</h3>
+          <p style="color: var(--ink-soft);">From Corvallis to the neglected places — we plant, support, and send.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ALL-HIVE BANNER -->
+  <section class="all-hive">
+    <div class="wrap">
+      <span class="eyebrow" style="color: var(--honey-soft);">First Sunday of every month</span>
+      <h2>All Hive Gathering</h2>
+      <p>Once a month, all three churches come together for worship, teaching, and a shared meal.
+         It's the family reunion at the center of everything we do.</p>
+    </div>
+  </section>
+
+  <!-- OUR COMMUNITIES (churches + leaders + Facebook, accordion by community) -->
+  <section id="communities" class="alt">
+    <div class="wrap">
+      <span class="eyebrow">Our communities</span>
+      <h2>Three communities, one family.</h2>
+      <p style="max-width: 740px; color: var(--ink-soft);">
+        Each church gathers weekly at its own location and time. Open a community to see how to visit,
+        who you'll meet, and its latest from Facebook.
+        <span class="sync-badge" id="commSync">Syncing…</span>
+      </p>
+
+      <!-- All-Hive: news for the whole family -->
+      <div class="hive-wide" id="hiveWide"></div>
+
+      <!-- One collapsible row per church -->
+      <div class="accordion" id="communityAccordion"></div>
+
+      <p class="sim-note">
+        Leaders and contacts come from a <strong>simulated</strong> Breeze (Tithely) sync; posts come from a
+        <strong>simulated</strong> Facebook aggregation across all four pages. Live data loads once each
+        church's Breeze account and Facebook page are connected.
+      </p>
+    </div>
+  </section>
+
+  <!-- FREEDOM PRAYER -->
+  <section id="freedom-prayer">
+    <div class="wrap fp">
+      <div class="copy">
+        <span class="eyebrow">Ministry</span>
+        <h2>Freedom Prayer</h2>
+        <p>
+          A facilitated conversation with God — where He reveals truth, heals the heart, and leads
+          us into a more abundant life in Christ. Not counseling. A listening, praying, scribing
+          team walks with you as you meet with the Lord.
+        </p>
+        <p>
+          Freedom Prayer is offered to those who attend a Hive community church.
+        </p>
+        <a href="https://hive.breezechms.com/form/FPApplication" class="btn primary">Request a session</a>
+      </div>
+      <div class="fp-card">
+        <h3>What to expect</h3>
+        <ul>
+          <li>A team of three: facilitator, intercessor, scribe.</li>
+          <li>Prayer and listening — Holy Spirit–led, not script-driven.</li>
+          <li>Confidential. Paced to you. No cost.</li>
+          <li>Follow-up session available if helpful.</li>
+        </ul>
+        <p style="margin: 0; color: var(--ink-soft); font-size: 0.95rem;">
+          Submit the application and a coordinator will be in touch.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- CALENDAR -->
+  <section id="calendar" class="alt">
+    <div class="wrap">
+      <div class="cal-head-row">
+        <div>
+          <span class="eyebrow">Calendar</span>
+          <h2 style="margin-bottom: 0.25rem;">What's happening</h2>
+        </div>
+        <button type="button" class="btn-suggest" id="suggestBtn">+ Suggest an event</button>
+      </div>
+      <p style="color: var(--ink-soft); max-width: 680px;">
+        Weekly gatherings, All-Hive Sundays, Festival of Tents, and more. Have something to add?
+        <strong>Suggest an event</strong> — the website managers review it, and once approved it's added to Breeze and appears here.
+        <span class="sync-badge" id="calSync">Syncing from Breeze…</span>
+      </p>
+      <div class="cal-controls">
+        <div class="cal-views" id="calViews">
+          <button type="button" data-view="list">List</button>
+          <button type="button" data-view="week" class="active">Week</button>
+          <button type="button" data-view="month">Month</button>
+        </div>
+        <div class="cal-nav" id="calNav" hidden>
+          <button type="button" id="calPrev" aria-label="Previous">‹</button>
+          <span class="cal-period" id="calPeriod"></span>
+          <button type="button" id="calNext" aria-label="Next">›</button>
+          <button type="button" id="calToday" class="cal-today-btn">Today</button>
+        </div>
+      </div>
+      <div class="cal-list" id="breezeCal">
+        <div class="cal-empty">Connecting to Breeze…</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- GIVE -->
+  <section id="give">
+    <div class="wrap">
+      <span class="eyebrow">Giving</span>
+      <h2>Partner with the work.</h2>
+      <p style="max-width: 720px; color: var(--ink-soft);">
+        Every gift supports the churches, the missionaries we send, and the people we serve —
+        from Corvallis to Cambodia.
+      </p>
+
+      <div class="give-grid">
+        <div class="give-card">
+          <h3>Online</h3>
+          <p>Give once or set up recurring gifts through our secure portal.</p>
+          <a href="https://hive.breezechms.com/give/online" class="btn primary" style="margin-top: 0.5rem;">Give online</a>
+        </div>
+        <div class="give-card">
+          <h3>Mail</h3>
+          <p>Checks made out to <strong>The Hive</strong>.</p>
+          <address style="font-style: normal; color: var(--ink-soft);">
+            P.O. Box 2111<br/>
+            Corvallis, OR 97339
+          </address>
+        </div>
+        <div class="give-card">
+          <h3>Bank Bill Pay</h3>
+          <p>Set up recurring automatic payments through your bank to the mailing address above.</p>
+        </div>
+      </div>
+
+      <div class="funds">
+        <strong>Designate your gift:</strong>
+        <ul id="fundList">
+          <li data-fund="general">General Fund</li>
+          <li data-fund="green-tree">Green Tree</li>
+          <li data-fund="spring">The Spring</li>
+          <li data-fund="corpus">Corpus Christi</li>
+          <li data-fund="festival">Festival of Tents</li>
+          <li data-fund="foster">Foster Parent Support</li>
+          <li data-fund="shiloh">Shiloh Houses</li>
+          <li data-fund="cambodia">Cambodia</li>
+          <li data-fund="dubai">Dubai</li>
+          <li data-fund="seagren">Bill &amp; Jenny Seagren</li>
+        </ul>
+        <p style="margin: 0.75rem 0 0; font-size: 0.85rem; color: var(--ink-soft);">Tap a fund to learn what it supports.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section id="contact" class="alt">
+    <div class="wrap">
+      <span class="eyebrow">Get in touch</span>
+      <h2>We'd love to hear from you.</h2>
+      <div class="contact-grid" style="margin-top: 2rem;">
+        <div class="contact-info">
+          <h3>The Hive Communities</h3>
+          <dl>
+            <dt>Email</dt>
+            <dd><a href="mailto:thehivechurch@gmail.com">thehivechurch@gmail.com</a></dd>
+            <dt>Phone</dt>
+            <dd>(541) 224-7748</dd>
+            <dt>Mail</dt>
+            <dd>P.O. Box 2111<br/>Corvallis, OR 97339</dd>
+            <dt>Facebook</dt>
+            <dd><a href="https://www.facebook.com/pg/CorvallisHive/">facebook.com/CorvallisHive</a></dd>
+          </dl>
+          <p style="color: var(--ink-soft); font-size: 0.95rem; margin-top: 1.5rem;">
+            Looking to visit a church? See <a href="#communities">our three communities</a> —
+            each has its own rhythm and welcome.
+          </p>
+        </div>
+        <form class="contact" onsubmit="event.preventDefault(); alert('Form wired to backend at launch.');">
+          <label for="name">Name</label>
+          <input type="text" id="name" name="name" required />
+          <label for="email">Email</label>
+          <input type="email" id="email" name="email" required />
+          <label for="message">How can we help?</label>
+          <textarea id="message" name="message" required></textarea>
+          <button type="submit" class="btn primary" style="width: 100%;">Send</button>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- INTEGRATION / SYSTEM MAP (internal review artifact) -->
+  <section id="integration">
+    <div class="wrap">
+      <span class="eyebrow">For reviewers · backend</span>
+      <h2>Integration &amp; system map</h2>
+      <p style="max-width: 740px; color: var(--ink-soft);">
+        How this site connects to the back office. <strong>Breeze (Tithely)</strong> is the system of
+        record; the app reads people, events, and roles on a schedule, layers on what Breeze doesn't
+        model (announcements, push, prayer privacy, sermon embeds), and broadcasts through Breeze
+        email/SMS, web push, SoundCloud embeds, and — today, by hand — Facebook + WhatsApp.
+      </p>
+      <div style="display: flex; flex-wrap: wrap; gap: 0.85rem; margin-top: 1.5rem;">
+        <a href="../INTEGRATION-MAP.html" class="btn primary">Ecosystem &amp; roles map →</a>
+        <a href="system-map.html" class="btn secondary">Architecture &amp; data flow →</a>
+      </div>
+      <p style="font-size: 0.88rem; color: var(--ink-soft); max-width: 700px; margin-top: 1rem;">
+        Two complementary review artifacts. The <strong>ecosystem &amp; roles map</strong> is interactive:
+        every tool grouped by the role it plays, a current-vs-target toggle, click-through detail, and the
+        gaps &amp; tensions to resolve. The <strong>architecture &amp; data flow</strong> view shows the
+        technical read/write pipeline (Breeze → poll → cache → app), who owns which data, and exactly what
+        this prototype simulates.
+      </p>
+    </div>
+  </section>
+
+</main>
+
+<section id="churchDetail" class="detail" hidden></section>
+
+<footer>
+  <div class="wrap">
+    <div>
+      <div class="brand" style="color: var(--white); margin-bottom: 1rem;">
+        <svg width="28" height="28" viewBox="0 0 40 40" aria-hidden="true">
+          <g fill="none" stroke="#d69a2f" stroke-width="1.5" stroke-linejoin="round">
+            <polygon points="20,13.5 25.63,16.75 25.63,23.25 20,26.5 14.37,23.25 14.37,16.75"/>
+            <polygon points="31.26,13.5 36.89,16.75 36.89,23.25 31.26,26.5 25.63,23.25 25.63,16.75"/>
+            <polygon points="8.74,13.5 14.37,16.75 14.37,23.25 8.74,26.5 3.11,23.25 3.11,16.75"/>
+            <polygon points="25.63,3.75 31.26,7 31.26,13.5 25.63,16.75 20,13.5 20,7"/>
+            <polygon points="14.37,3.75 20,7 20,13.5 14.37,16.75 8.74,13.5 8.74,7"/>
+            <polygon points="25.63,23.25 31.26,26.5 31.26,33 25.63,36.25 20,33 20,26.5"/>
+            <polygon points="14.37,23.25 20,26.5 20,33 14.37,36.25 8.74,33 8.74,26.5"/>
+          </g>
+        </svg>
+        The Hive Communities
+      </div>
+      <p style="margin: 0; max-width: 380px;">
+        A family of micro churches in Corvallis, Oregon — building Jesus communities,
+        developing leaders, and sharing Jesus with the world.
+      </p>
+      <a href="http://www.dcfi.org" target="_blank" rel="noopener"
+         style="display: inline-flex; flex-direction: column; gap: 0.45rem; margin-top: 1.5rem; text-decoration: none;">
+        <span style="font-family: 'Helvetica Neue', 'Arial', sans-serif; font-size: 0.72rem; text-transform: uppercase; letter-spacing: 0.1em; color: #8a8068;">Part of the DOVE International family</span>
+        <img src="https://doveinternational.com/wp-content/uploads/2020/03/DI-Logo-FullColor-1536x465.png" alt="DOVE International"
+             style="width: 200px; max-width: 100%; background: var(--white); padding: 0.55rem 0.8rem; border-radius: 8px;" />
+      </a>
+    </div>
+    <div>
+      <h4>Visit</h4>
+      <ul>
+        <li><a href="#communities">Green Tree</a></li>
+        <li><a href="#communities">The Spring</a></li>
+        <li><a href="#communities">Corpus Christi</a></li>
+        <li><a href="#calendar">Calendar</a></li>
+      </ul>
+    </div>
+    <div>
+      <h4>Engage</h4>
+      <ul>
+        <li><a href="#freedom-prayer">Freedom Prayer</a></li>
+        <li><a href="#give">Give</a></li>
+        <li><a href="#contact">Contact</a></li>
+        <li><a href="http://www.dcfi.org">DCFI</a></li>
+        <li><a href="../INTEGRATION-MAP.html">Ecosystem &amp; roles map</a></li>
+        <li><a href="system-map.html">Architecture &amp; data flow</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="wrap">
+    <div class="footer-bar">
+      © <span id="year"></span> The Hive Communities · Corvallis, Oregon
+    </div>
+  </div>
+</footer>
+
+<!-- SIGN-IN MODAL -->
+<div class="modal" id="signinModal">
+  <div class="modal-card">
+    <button class="modal-x" type="button" data-close aria-label="Close">&times;</button>
+    <h3>Sign in</h3>
+    <p class="modal-note">Prototype demo — any email and password signs you in. No real account is created; this previews the church-admin editing experience.</p>
+    <form id="signinForm">
+      <label for="si-email">Email</label>
+      <input type="email" id="si-email" required />
+      <label for="si-pass">Password</label>
+      <input type="password" id="si-pass" required />
+      <button type="submit" class="btn primary" style="width:100%;">Sign in</button>
+    </form>
+  </div>
+</div>
+
+<!-- EDIT CHURCH MODAL -->
+<div class="modal" id="editModal">
+  <div class="modal-card">
+    <button class="modal-x" type="button" data-close aria-label="Close">&times;</button>
+    <h3>Edit church</h3>
+    <form id="editForm">
+      <input type="hidden" id="edit-id" />
+      <label for="edit-name">Name</label>
+      <input type="text" id="edit-name" required />
+      <label for="edit-description">Description</label>
+      <textarea id="edit-description" rows="2"></textarea>
+      <label for="edit-hosts">Hosts</label>
+      <input type="text" id="edit-hosts" />
+      <label for="edit-when">When</label>
+      <input type="text" id="edit-when" />
+      <label for="edit-where">Where</label>
+      <textarea id="edit-where" rows="2"></textarea>
+      <button type="submit" class="btn primary" style="width:100%;">Save changes</button>
+    </form>
+  </div>
+</div>
+
+<!-- BREEZE CONNECTIONS MODAL -->
+<div class="modal" id="connModal">
+  <div class="modal-card">
+    <button class="modal-x" type="button" data-close aria-label="Close">&times;</button>
+    <h3>Breeze connections</h3>
+    <p class="modal-note">Simulated. In production each church authorizes one Breeze (Tithely) API key, and the app polls on a schedule into a cache — there's no live connection here.</p>
+    <div id="connList"></div>
+    <button type="button" class="btn primary" id="syncNow2" style="width:100%; margin-top:1.25rem;">Sync all now</button>
+    <p style="margin:1rem 0 0; font-size:0.85rem; text-align:center;">
+      <a href="system-map.html">View the architecture &amp; data-flow map →</a>
+    </p>
+  </div>
+</div>
+
+<!-- SUGGEST AN EVENT MODAL (public) -->
+<div class="modal" id="submitModal">
+  <div class="modal-card">
+    <button class="modal-x" type="button" data-close aria-label="Close">&times;</button>
+    <h3>Suggest an event</h3>
+    <p class="modal-note">Anyone can suggest an event. It goes to the website managers for review — once approved, it's added to Breeze and shows up on the public calendar.</p>
+    <form id="submitForm">
+      <label for="ev-title">Event title</label>
+      <input type="text" id="ev-title" required />
+      <label for="ev-church">Community</label>
+      <select id="ev-church">
+        <option value="all">All Hive</option>
+        <option value="hive">Midweek activity (HOVHOP)</option>
+        <option value="green-tree">Green Tree</option>
+        <option value="spring">The Spring</option>
+        <option value="corpus">Corpus Christi</option>
+      </select>
+      <label for="ev-date">Date</label>
+      <input type="date" id="ev-date" required />
+      <label for="ev-time">Time</label>
+      <input type="text" id="ev-time" placeholder="e.g. 6:30 p.m." required />
+      <label for="ev-loc">Location</label>
+      <input type="text" id="ev-loc" required />
+      <label for="ev-desc">Details (optional)</label>
+      <textarea id="ev-desc" rows="2"></textarea>
+      <label for="ev-name">Your name</label>
+      <input type="text" id="ev-name" required />
+      <label for="ev-email">Your email</label>
+      <input type="email" id="ev-email" required />
+      <button type="submit" class="btn primary" style="width:100%;">Submit for review</button>
+    </form>
+    <div id="submitDone" hidden>
+      <p class="modal-note" style="border-left-color:#3f9a4a;">✓ Thanks! Your event was sent to the website managers for review. You'll see it on the calendar once it's approved and synced to Breeze.</p>
+      <button type="button" class="btn secondary" data-close style="width:100%;">Close</button>
+    </div>
+  </div>
+</div>
+
+<!-- EVENT REVIEW MODAL (managers only) -->
+<div class="modal" id="reviewModal">
+  <div class="modal-card">
+    <button class="modal-x" type="button" data-close aria-label="Close">&times;</button>
+    <h3>Event requests</h3>
+    <p class="modal-note">Submitted by members and visitors. Approving pushes the event to Breeze (the system of record); it then appears on the public calendar on the next sync.</p>
+    <div id="reviewList"></div>
+  </div>
+</div>
+
+<!-- FACEBOOK EVENT INTAKE MODAL (managers only) -->
+<div class="modal" id="fbEventModal">
+  <div class="modal-card">
+    <button class="modal-x" type="button" data-close aria-label="Close">&times;</button>
+    <h3>Facebook events detected</h3>
+    <p class="modal-note">Posts from the four pages that look like events — structured Facebook Events (high confidence) or dates/times detected in post text (medium). Adding one sends it to the review queue, where a manager still approves it before it reaches Breeze and the calendar. Ignore dismisses it.</p>
+    <div id="fbEventList"></div>
+  </div>
+</div>
+
+<!-- PUSH EVENT TO FACEBOOK MODAL (comms / managers only) -->
+<div class="modal" id="fbPushModal">
+  <div class="modal-card">
+    <button class="modal-x" type="button" data-close aria-label="Close">&times;</button>
+    <h3>Post event to Facebook</h3>
+    <p class="modal-note">Facebook no longer lets apps create Events automatically — the only API path is a gated partner program for ticketing platforms. This prepares everything so a communications person can create the Event <em>as the page</em> in a few clicks, then mark it posted so the team knows it's done.</p>
+    <div id="fbPushBody"></div>
+  </div>
+</div>
+
+<!-- EVENT DETAIL MODAL (public) -->
+<div class="modal" id="eventModal">
+  <div class="modal-card">
+    <button class="modal-x" type="button" data-close aria-label="Close">&times;</button>
+    <div id="eventDetailBody"></div>
+  </div>
+</div>
+
+<!-- GIVING FUND / MISSION DETAIL MODAL (public) -->
+<div class="modal" id="fundModal">
+  <div class="modal-card">
+    <button class="modal-x" type="button" data-close aria-label="Close">&times;</button>
+    <div id="fundBody"></div>
+  </div>
+</div>
+
+<!-- SHARE EVENT TO WHATSAPP MODAL (comms / managers only) -->
+<div class="modal" id="waModal">
+  <div class="modal-card">
+    <button class="modal-x" type="button" data-close aria-label="Close">&times;</button>
+    <h3>Share event to WhatsApp</h3>
+    <p class="modal-note">WhatsApp's API can't post into your existing group chats &mdash; only a gated program for very high-volume senders can, and not to manually-created groups. This prepares a ready-to-send message so a communications person can drop it into the right WhatsApp group in a couple of taps.</p>
+    <div id="waBody"></div>
+  </div>
+</div>
+
+<script>
+(function () {
+  var STORE_KEY = 'hive_churches_v1';
+  var DEFAULTS = [
+    { id: 'green-tree', name: 'Green Tree', accent: 'green',
+      description: 'A Jesus-centered community building leaders and sharing Jesus with the world around us.',
+      hosts: 'TBD — confirm', when: 'Sundays, 4:00 p.m.',
+      where: '7th Day Adventist Hall\n3160 SW Western Blvd, Corvallis', contact: '' },
+    { id: 'spring', name: 'The Spring', accent: 'spring',
+      description: 'Loving Jesus, caring for our community, making disciples who make disciples.',
+      hosts: 'Rotating weekly team', when: 'Sundays, 10:00 a.m.',
+      where: 'HOVHOP\n2555 NW Highland Dr., Corvallis', contact: '' },
+    { id: 'corpus', name: 'Corpus Christi', accent: 'corpus',
+      description: 'Developing worshippers, teaching discipleship, serving families.',
+      hosts: 'Samuel & Kalea Stumbo', when: 'Sundays, 4:30 p.m.',
+      where: "Tim & Angie's House\n271 N 20th Pl., Philomath", contact: 'corpuschristimail@proton.me' }
+  ];
+
+  var churches = load();
+  var isAdmin = sessionStorage.getItem('hive_admin') === '1';
+
+  // Recurring midweek activities (HOVHOP programming, youth groups, etc.). dow: 0=Sun..6=Sat.
+  // Shown on the calendar (List/Week/Month) with a "Midweek" tag.
+  var ACTIVITIES_KEY = 'hive_activities_v1';
+  var ACTIVITIES_DEFAULT = [
+    { dow: 1, main: '7–10am Devo Sets', loc: 'HOVHOP' },
+    { dow: 1, main: '5–8pm The Furnace', loc: 'HOVHOP' },
+    { dow: 2, main: '10–12pm Kingdom Women', loc: "Angie Wenger's · 271 N 20th Pl., Philomath" },
+    { dow: 2, main: '6:30–8:30pm High School Youth Group', loc: 'HOVHOP' },
+    { dow: 3, main: '6pm Middle School Boys Group', loc: 'HOVHOP' },
+    { dow: 5, main: '7–10am Devo Sets', loc: 'HOVHOP' },
+    { dow: 5, main: '6pm City-wide Worship Night (Altar)', loc: 'HOVHOP' }
+  ];
+  var activities = loadJSON(ACTIVITIES_KEY, null) || JSON.parse(JSON.stringify(ACTIVITIES_DEFAULT));
+  function persistActivities() { try { localStorage.setItem(ACTIVITIES_KEY, JSON.stringify(activities)); } catch (e) {} }
+
+  // Event submissions (pending manager review) + approved events that have been "pushed to Breeze".
+  var SUBMIT_KEY = 'hive_event_submissions_v1';
+  var APPROVED_KEY = 'hive_breeze_events_v1';
+  function loadJSON(key, fallback) {
+    try { var raw = localStorage.getItem(key); if (raw) { return JSON.parse(raw); } } catch (e) {}
+    return fallback;
+  }
+  var submissions = loadJSON(SUBMIT_KEY, null);
+  var approvedEvents = loadJSON(APPROVED_KEY, []);
+  function persistSubs() { try { localStorage.setItem(SUBMIT_KEY, JSON.stringify(submissions)); } catch (e) {} }
+  function persistApproved() { try { localStorage.setItem(APPROVED_KEY, JSON.stringify(approvedEvents)); } catch (e) {} }
+  // First load: seed one sample request so the review queue isn't empty in the demo.
+  if (submissions === null) {
+    var seedD = new Date(); seedD.setDate(seedD.getDate() + 10);
+    var seedStr = seedD.getFullYear() + '-' + pad(seedD.getMonth() + 1) + '-' + pad(seedD.getDate());
+    submissions = [{
+      id: 'evdemo1', church: 'spring', title: 'Spring picnic & baptisms',
+      date: seedStr, time: '12:30 p.m.', location: 'Avery Park, Shelter 3, Corvallis',
+      description: 'Potluck picnic after the morning gathering, with baptisms to follow at the river.',
+      submitter: 'Bond Nichols', email: 'nicholsfam@example.com', submittedAt: new Date().toISOString()
+    }];
+    persistSubs();
+  }
+
+  var accEl = document.getElementById('communityAccordion');
+  var hiveWideEl = document.getElementById('hiveWide');
+  var detailEl = document.getElementById('churchDetail');
+  var mainEl = document.getElementById('top');
+  var adminBar = document.getElementById('adminBar');
+  var signinLink = document.getElementById('signinLink');
+  var signinModal = document.getElementById('signinModal');
+  var editModal = document.getElementById('editModal');
+
+  function load() {
+    try { var raw = localStorage.getItem(STORE_KEY); if (raw) { return JSON.parse(raw); } } catch (e) {}
+    return JSON.parse(JSON.stringify(DEFAULTS));
+  }
+  function persist() { try { localStorage.setItem(STORE_KEY, JSON.stringify(churches)); } catch (e) {} }
+  function esc(s) { return (s || '').replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;'); }
+  function nl(s) { return esc(s).replace(/\n/g, '<br/>'); }
+  function find(id) { for (var i = 0; i < churches.length; i++) { if (churches[i].id === id) { return churches[i]; } } return null; }
+  function hostsHtml(h) { return /^TBD/i.test(h || '') ? '<span class="tbd">' + esc(h) + '</span>' : esc(h); }
+
+  // Map an editable church id to its Facebook page key (FB_PAGES uses 'green' not 'green-tree').
+  function fbKeyOf(id) { return id === 'green-tree' ? 'green' : id; }
+
+  // Facebook posts for one page key, rendered as compact cards (shared by accordion + all-Hive panel).
+  function fbPostsHtml(pageKey) {
+    var posts = FB_POSTS.filter(function (p) { return p.page === pageKey; });
+    var pg = FB_PAGES[pageKey];
+    if (!posts.length) {
+      return '<p class="cal-loc">No recent Facebook posts'
+        + (pg && pg.url === '#' ? ' — page not yet linked.' : '.') + '</p>';
+    }
+    return '<div class="fb-feed">' + posts.map(function (p) {
+      var ac = pg ? pg.accent : 'hive';
+      var cls = classifyPost(p);
+      var eb = cls.isEvent ? '<span class="fb-evt-badge">📅 Event</span>' : '';
+      var link = (pg && pg.url && pg.url !== '#')
+        ? '<a class="fb-link" href="' + pg.url + '" target="_blank" rel="noopener">View on Facebook →</a>'
+        : '<span class="fb-link" style="color:var(--ink-soft); font-weight:500;">Page not yet linked</span>';
+      return '<article class="fb-post ' + ac + '">'
+        + '<div class="fb-head"><span class="fb-avatar ' + ac + '">' + esc(pg ? pg.initials : 'H') + '</span>'
+        + '<span class="fb-meta"><span class="fb-page">' + esc(pg ? pg.name : 'The Hive') + '</span>'
+        + '<span class="fb-time">' + esc(p.ago) + ' · Facebook</span></span>' + eb + '</div>'
+        + '<p class="fb-body">' + esc(p.text) + '</p>'
+        + '<div class="fb-foot"><span class="fb-stat">' + p.likes + ' likes</span>'
+        + '<span class="fb-stat">' + p.comments + ' comments</span>' + link + '</div>'
+        + '</article>';
+    }).join('') + '</div>';
+  }
+
+  // The all-Hive panel above the accordion: family-wide Facebook posts.
+  function renderHiveWide() {
+    if (!hiveWideEl) { return; }
+    hiveWideEl.innerHTML = '<div class="hive-wide-head"><span class="acc-band hive"></span>'
+      + '<div class="acc-titles"><span class="acc-name">All Hive</span>'
+      + '<span class="acc-sub">News & posts for the whole family</span></div></div>'
+      + fbPostsHtml('hive');
+  }
+
+  // One collapsible row per community: details + leaders + that church's Facebook posts.
+  function renderCards() {
+    renderHiveWide();
+    if (!accEl) { return; }
+    accEl.innerHTML = churches.map(function (c) {
+      var open = '';
+      return '<div class="acc-item ' + c.accent + open + '" data-id="' + c.id + '">'
+        + '<button class="acc-head" type="button" data-toggle="' + c.id + '" aria-expanded="' + (open ? 'true' : 'false') + '">'
+        + '<span class="acc-band ' + c.accent + '"></span>'
+        + '<span class="acc-titles"><span class="acc-name">' + esc(c.name) + '</span>'
+        + '<span class="acc-sub">' + esc(c.when) + '</span></span>'
+        + '<span class="acc-chevron">›</span>'
+        + '</button>'
+        + '<div class="acc-body">'
+        + '<p class="tagline">' + esc(c.description) + '</p>'
+        + (isAdmin ? '<button class="btn-edit" type="button" data-edit="' + c.id + '">Edit</button>' : '')
+        + '<div class="acc-grid">'
+        + '<div><h4 class="acc-h">Visit</h4><dl class="acc-dl">'
+        + '<dt>Hosts</dt><dd>' + hostsHtml(c.hosts) + '</dd>'
+        + '<dt>When</dt><dd>' + esc(c.when) + '</dd>'
+        + '<dt>Where</dt><dd>' + nl(c.where) + '</dd>'
+        + (c.contact ? '<dt>Contact</dt><dd><a href="mailto:' + esc(c.contact) + '">' + esc(c.contact) + '</a></dd>' : '')
+        + '</dl><a href="#church/' + c.id + '" class="learn">Full page for ' + esc(c.name) + ' →</a></div>'
+        + '<div><h4 class="acc-h">Who you\'ll meet <span class="sync-badge mini">Breeze</span></h4>'
+        + leadersFor(c.id) + '</div>'
+        + '</div>'
+        + '<h4 class="acc-h">From Facebook <span class="sync-badge mini">Facebook</span></h4>'
+        + fbPostsHtml(fbKeyOf(c.id))
+        + '</div></div>';
+    }).join('');
+  }
+
+  // ---------------------------------------------------------------------------
+  // Per-church subpage data (simulated). In production each church's subpage is
+  // fed by per-church sources: YouTube/SoundCloud for sermons, a CMS or static
+  // PDF for the bulletin, an Instagram or self-hosted gallery for photos, a
+  // Breeze or FB-group surface for the community board. Edit these stubs to
+  // demo varying content per church without changing renderer code.
+  // ---------------------------------------------------------------------------
+  var SERMONS = {
+    'green-tree': [
+      { title: 'Romans 8 — No Condemnation', daysAgo: 7,  speaker: 'Andrew Bumstead', length: '38 min', format: 'video', source: 'YouTube',    url: '#' },
+      { title: 'The Cost of Following',      daysAgo: 14, speaker: 'Andrew Bumstead', length: '32 min', format: 'audio', source: 'SoundCloud', url: '#' },
+      { title: 'Family Resemblance',         daysAgo: 21, speaker: 'Norma Bumstead',  length: '27 min', format: 'video', source: 'YouTube',    url: '#' },
+      { title: 'Built Together',             daysAgo: 28, speaker: 'Andrew Bumstead', length: '36 min', format: 'audio', source: 'Podcast',    url: '#' }
+    ],
+    spring: [
+      { title: 'Disciples Who Make Disciples',    daysAgo: 7,  speaker: 'Bond Nichols',  length: '34 min', format: 'audio', source: 'Podcast',    url: '#' },
+      { title: 'The Father\'s Heart for Corvallis', daysAgo: 14, speaker: 'Guest: Jim Lo', length: '41 min', format: 'video', source: 'YouTube',    url: '#' },
+      { title: 'When We Gather',                  daysAgo: 21, speaker: 'Rotating team', length: '29 min', format: 'audio', source: 'SoundCloud', url: '#' }
+    ],
+    corpus: [
+      { title: 'Lifting Hands — Worship as War', daysAgo: 7,  speaker: 'Samuel Stumbo', length: '44 min', format: 'video', source: 'YouTube',    url: '#' },
+      { title: 'Households of Faith',            daysAgo: 14, speaker: 'Samuel Stumbo', length: '35 min', format: 'audio', source: 'Podcast',    url: '#' },
+      { title: 'The Beauty of Confession',       daysAgo: 21, speaker: 'Kalea Stumbo',  length: '26 min', format: 'audio', source: 'SoundCloud', url: '#' },
+      { title: 'A Long Obedience',               daysAgo: 28, speaker: 'Samuel Stumbo', length: '40 min', format: 'video', source: 'YouTube',    url: '#' }
+    ]
+  };
+
+  var BULLETIN = {
+    'green-tree': {
+      sundaysAgo: 0,
+      headline: 'Romans 8 · Communion · Sending',
+      summary: 'Welcome and worship · Romans 8:1–17 (Andrew) · Communion together · Prayer for the Stones · Sending and benediction.',
+      pdfUrl: '#'
+    },
+    spring: {
+      sundaysAgo: 0,
+      headline: 'Gather · Word · Table',
+      summary: 'Coffee from 9:30 · Worship at 10 · Teaching from the rotating team · The Table together · Prayer for one another to close.',
+      pdfUrl: '#'
+    },
+    corpus: {
+      sundaysAgo: 0,
+      headline: 'Worship · Word · Households',
+      summary: 'Gathered worship · Teaching from Samuel · Communion served family-by-family · Prayer over each household before we go.',
+      pdfUrl: '#'
+    }
+  };
+
+  var PHOTOS = {
+    'green-tree': [
+      { caption: 'Sunday gathering · last week' },
+      { caption: 'Meal after teaching' },
+      { caption: 'Devo Sets · Friday morning' },
+      { caption: 'Baptisms in the river · April' },
+      { caption: 'Kids serving at All-Hive' },
+      { caption: 'Norma + the community-care team' }
+    ],
+    spring: [
+      { caption: 'Sunday morning at HOVHOP' },
+      { caption: 'Church picnic at Avery Park' },
+      { caption: 'Worship night · last Friday' },
+      { caption: 'Prayer for our neighbors' },
+      { caption: 'Kids worshiping together' }
+    ],
+    corpus: [
+      { caption: 'Around the table in Philomath' },
+      { caption: 'Family worship · last Sunday' },
+      { caption: 'Kingdom Women · Tuesday morning' },
+      { caption: 'Middle School Boys · Wednesday' },
+      { caption: 'Communion served by households' },
+      { caption: 'Outdoor service at Tim & Angie\'s' }
+    ]
+  };
+
+  var BOARD = {
+    'green-tree': [
+      { kind: 'prayer',   text: 'Pray for the Johnson family as they move next week — peace and provision for the transition.', who: 'Norma' },
+      { kind: 'announce', text: 'Meal train for the Stones opens Wednesday — see Norma to sign up.', who: 'Community Care' },
+      { kind: 'welcome',  text: 'New to Green Tree? Andrew + Norma host newcomers for coffee the second Saturday of each month.', who: 'Hosts' }
+    ],
+    spring: [
+      { kind: 'prayer',   text: 'Bond is in Cambodia for two weeks — pray for safety, clear teaching, and good rest.', who: 'Spring team' },
+      { kind: 'announce', text: 'Church picnic this Saturday at 2pm · Avery Park, Shelter 3 · bring a side.', who: 'Hosts' },
+      { kind: 'welcome',  text: 'First time visiting? The rotating team will be at the welcome table before and after.', who: 'Welcome' }
+    ],
+    corpus: [
+      { kind: 'prayer',   text: 'Pray for the Stumbos as they discern next steps for the youth ministry expansion.', who: 'Samuel' },
+      { kind: 'announce', text: 'Kingdom Women resumes Tuesday at 10am after the Memorial Day break.', who: 'Kingdom Women' },
+      { kind: 'announce', text: 'Households are reading through 1 Peter together — ask Kalea for the reading plan.', who: 'Discipleship' },
+      { kind: 'welcome',  text: 'We meet in a home — comfortable shoes, casual dress, kids welcome and in the room.', who: 'Hosts' }
+    ]
+  };
+
+  // --- per-church subpage helpers --------------------------------------------
+
+  function churchLabelOf(churchId) {
+    return churchId === 'all' ? 'All Hive'
+      : churchId === 'hive' ? 'Midweek'
+      : churchId === 'green-tree' ? 'Green Tree'
+      : churchId === 'spring' ? 'The Spring'
+      : churchId === 'corpus' ? 'Corpus Christi' : churchId;
+  }
+
+  function lastSundayStr(weeksBack) {
+    var d = new Date(); d.setHours(0, 0, 0, 0);
+    d.setDate(d.getDate() - d.getDay() - 7 * (weeksBack || 0));
+    return dstr(d);
+  }
+  function daysAgoStr(n) {
+    var d = new Date(); d.setHours(0, 0, 0, 0);
+    d.setDate(d.getDate() - (n || 0));
+    return dstr(d);
+  }
+
+  // Next gathering for this church (next 14 days). Used by the "This Sunday" card.
+  function nextGatheringFor(churchId) {
+    var today = new Date(); today.setHours(0, 0, 0, 0);
+    var end = new Date(today); end.setDate(end.getDate() + 14);
+    var evts = eventsInRange(today, end).filter(function (e) { return e.church === churchId; });
+    return evts.length ? evts[0] : null;
+  }
+
+  // Calendar slice for the church subpage: this church's Sunday gatherings,
+  // All-Hive events (which apply to every church), and Hive midweek activities
+  // that meet at this church's host site. Next four weeks, max 10 items.
+  function upcomingForChurchHtml(c) {
+    var today = new Date(); today.setHours(0, 0, 0, 0);
+    var end = new Date(today); end.setDate(end.getDate() + 27);
+    var evts = eventsInRange(today, end).filter(function (e) {
+      return e.church === c.id || e.church === 'all';
+    }).slice(0, 10);
+    if (!evts.length) {
+      return '<div class="cal-list det-cal"><div class="cal-empty">No upcoming gatherings on the calendar.</div></div>';
+    }
+    return '<div class="cal-list det-cal">' + evts.map(function (e) {
+      var a = accentOf(e.church);
+      return '<div class="cal-item">'
+        + '<div class="cal-date"><span class="cal-dow">' + fmtDate(e.date) + '</span><span class="cal-time">' + esc(e.time) + '</span></div>'
+        + '<div class="cal-meta"><span class="cal-dot ' + a + '"></span>'
+        + '<div><div class="cal-title">' + esc(e.title) + '</div><div class="cal-loc">' + esc(e.location) + '</div></div></div>'
+        + '<div class="cal-right"><span class="cal-tag ' + a + '">' + esc(churchLabelOf(e.church)) + '</span></div>'
+        + '</div>';
+    }).join('') + '</div>';
+  }
+
+  // "This Sunday" — next gathering + this week's bulletin, side by side.
+  function thisSundayHtml(c) {
+    var next = nextGatheringFor(c.id);
+    var bull = BULLETIN[c.id];
+    var nextHtml = next
+      ? '<h4>Next gathering</h4>'
+        + '<div class="ts-main">' + esc(next.title) + '</div>'
+        + '<div class="ts-sub">' + fmtDate(next.date) + (next.time ? ' · ' + esc(next.time) : '') + '</div>'
+        + '<div class="ts-sub">' + esc(next.location) + '</div>'
+        + '<a class="ts-link" href="#calendar">See full calendar →</a>'
+      : '<h4>Next gathering</h4><div class="ts-sub">No upcoming gathering on the calendar.</div>';
+    var bullHtml;
+    if (bull) {
+      var bullDate = lastSundayStr(bull.sundaysAgo || 0);
+      bullHtml = '<h4>This week\'s bulletin</h4>'
+        + '<div class="ts-main">' + esc(bull.headline) + '</div>'
+        + '<div class="ts-sub">' + esc(fmtDateStr(bullDate)) + '</div>'
+        + (bull.pdfUrl ? '<a class="ts-link" href="' + esc(bull.pdfUrl) + '" target="_blank" rel="noopener">Open bulletin (PDF) →</a>' : '');
+    } else {
+      bullHtml = '<h4>This week\'s bulletin</h4><div class="ts-sub">No bulletin posted yet this week.</div>';
+    }
+    return '<div class="this-sunday"><div>' + nextHtml + '</div><div>' + bullHtml + '</div></div>';
+  }
+
+  // Sermon archive (3–4 recent sermons per church). format: 'video' | 'audio'.
+  function sermonsHtml(churchId) {
+    var list = SERMONS[churchId] || [];
+    if (!list.length) {
+      return '<div class="sermon-list"><div class="cal-empty" style="padding:1.5rem">No sermons posted yet. Production wires this to a YouTube channel feed, SoundCloud, or podcast RSS per church.</div></div>';
+    }
+    return '<div class="sermon-list">' + list.map(function (s) {
+      var iconClass = s.format === 'video' ? 'video' : 'audio';
+      var iconChar = s.format === 'video' ? '▶' : '♪';
+      var ctaLabel = s.format === 'video' ? 'Watch →' : 'Listen →';
+      var dateStr = fmtDateStr(daysAgoStr(s.daysAgo));
+      var sub = dateStr + ' · ' + esc(s.speaker) + (s.length ? ' · ' + esc(s.length) : '') + (s.source ? ' · ' + esc(s.source) : '');
+      return '<div class="sermon-row">'
+        + '<div class="sermon-icon ' + iconClass + '">' + iconChar + '</div>'
+        + '<div class="sermon-meta">'
+        + '<div class="sermon-title">' + esc(s.title) + '</div>'
+        + '<div class="sermon-sub">' + sub + '</div>'
+        + '</div>'
+        + '<a class="sermon-cta" href="' + esc(s.url || '#') + '" target="_blank" rel="noopener">' + ctaLabel + '</a>'
+        + '</div>';
+    }).join('') + '</div>';
+  }
+
+  // Facebook Page Plugin stand-in. Production swaps the body for Meta's iframe:
+  //   <iframe src="https://www.facebook.com/plugins/page.php?href=ENCODED_URL&tabs=timeline&..." />
+  // Demo keeps the same visual frame but loads the simulated post stream so the
+  // mockup remains dependency-free (no FB SDK, no third-party tracking).
+  function fbPluginHtml(churchId) {
+    var fbKey = fbKeyOf(churchId);
+    var pg = FB_PAGES[fbKey];
+    var hasUrl = !!(pg && pg.url && pg.url !== '#');
+    var initials = (pg && pg.initials) || 'H';
+    var pageName = (pg && pg.name) || 'The Hive';
+    var head = '<div class="fb-plugin-head">'
+      + '<span class="fb-mark">f</span>'
+      + '<span class="fb-page-name">' + esc(pageName) + '</span>'
+      + '<span class="fb-plugin-flag">Page Plugin</span>'
+      + '</div>';
+    var body, foot;
+    if (hasUrl) {
+      body = '<div class="fb-plugin-body">' + fbPostsHtml(fbKey) + '</div>';
+      foot = '<div class="fb-plugin-foot">'
+        + '<span>Production swaps the body for Meta\'s Page Plugin iframe.</span>'
+        + '<a href="' + esc(pg.url) + '" target="_blank" rel="noopener">View page on Facebook →</a>'
+        + '</div>';
+    } else {
+      body = '<div class="fb-plugin-body">'
+        + '<p class="fb-plugin-pending"><strong>Facebook page not yet linked.</strong> When ' + esc(pageName)
+        + '\'s page URL is added, this becomes Meta\'s Page Plugin iframe. Preview from the simulated post stream:</p>'
+        + fbPostsHtml(fbKey)
+        + '</div>';
+      foot = '<div class="fb-plugin-foot">'
+        + '<span>Configure: set <code>FB_PAGES.' + fbKey + '.url</code> to the church\'s page URL.</span>'
+        + '</div>';
+    }
+    return '<div class="fb-plugin">' + head + body + foot + '</div>';
+  }
+
+  function photosHtml(churchId) {
+    var list = PHOTOS[churchId] || [];
+    if (!list.length) {
+      return '<div class="photo-empty">No photos posted yet. Hook up an Instagram feed or a self-hosted gallery to fill this in.</div>';
+    }
+    var accent = accentOf(churchId);
+    return '<div class="photo-grid">' + list.map(function (p) {
+      return '<div class="photo-tile ' + (p.accent || accent) + '"><span class="photo-cap">' + esc(p.caption) + '</span></div>';
+    }).join('') + '</div>';
+  }
+
+  function boardHtml(churchId) {
+    var list = BOARD[churchId] || [];
+    if (!list.length) {
+      return '<div class="photo-empty">No community board items right now.</div>';
+    }
+    var kindLabel = { prayer: 'Prayer', announce: 'Announce', welcome: 'Welcome' };
+    return '<div class="board-list">' + list.map(function (b) {
+      return '<div class="board-item">'
+        + '<span class="board-kind ' + b.kind + '">' + esc(kindLabel[b.kind] || b.kind) + '</span>'
+        + '<div class="board-body">'
+        + '<div class="board-text">' + esc(b.text) + '</div>'
+        + (b.who ? '<div class="board-who">— ' + esc(b.who) + '</div>' : '')
+        + '</div>'
+        + '</div>';
+    }).join('') + '</div>';
+  }
+
+  // Per-church giving block. Primary CTA opens this church's fund modal
+  // (existing FUNDS[id] entry); secondary links to the general giving page
+  // and to the all-Hive giving section.
+  function giveCardHtml(c) {
+    var f = FUNDS[c.id];
+    if (!f) {
+      return '<div class="give-block"><div class="gv-copy"><p>Per-church giving not yet configured for ' + esc(c.name) + '.</p></div></div>';
+    }
+    return '<div class="give-block">'
+      + '<div class="gv-copy">'
+      + '<h4>Give to ' + esc(c.name) + '</h4>'
+      + '<p>' + esc(f.desc) + '</p>'
+      + '<div class="gv-alt">'
+      + '<a href="#give">All Hive funds →</a>'
+      + '</div>'
+      + '</div>'
+      + '<div class="gv-actions">'
+      + '<button type="button" class="btn primary" data-fund="' + c.id + '">Give to ' + esc(c.name) + ' →</button>'
+      + '<a class="btn secondary" href="https://hive.breezechms.com/give/online" target="_blank" rel="noopener">Recurring gift</a>'
+      + '</div>'
+      + '</div>';
+  }
+
+  function renderDetail(id) {
+    var c = find(id);
+    if (!c) { location.hash = '#communities'; return; }
+    detailEl.innerHTML = '<div class="wrap">'
+      + '<a href="#communities" class="back">← All communities</a>'
+      + '<div class="detail-band ' + c.accent + '"></div>'
+      + '<span class="eyebrow">A Hive community</span>'
+      + '<h1>' + esc(c.name) + '</h1>'
+      + '<p class="detail-desc">' + esc(c.description) + '</p>'
+      + (isAdmin ? '<button class="btn primary btn-edit-lg" type="button" data-edit="' + c.id + '">Edit this church</button>' : '')
+      + '<dl class="detail-dl">'
+      + '<dt>Hosts</dt><dd>' + hostsHtml(c.hosts) + '</dd>'
+      + '<dt>When</dt><dd>' + esc(c.when) + '</dd>'
+      + '<dt>Where</dt><dd>' + nl(c.where) + '</dd>'
+      + (c.contact ? '<dt>Contact</dt><dd><a href="mailto:' + esc(c.contact) + '">' + esc(c.contact) + '</a></dd>' : '')
+      + '</dl>'
+
+      + thisSundayHtml(c)
+
+      + '<div class="det-section">'
+      + '<h3 class="detail-sub">Upcoming <span class="sync-badge mini">Breeze</span></h3>'
+      + upcomingForChurchHtml(c)
+      + '</div>'
+
+      + '<div class="det-section">'
+      + '<h3 class="detail-sub">Leadership <span class="sync-badge mini">Breeze</span></h3>'
+      + '<div class="detail-leaders">' + leadersFor(c.id) + '</div>'
+      + '</div>'
+
+      + '<div class="det-section">'
+      + '<h3 class="detail-sub">Recent sermons <span class="sync-badge mini">YouTube / SoundCloud</span></h3>'
+      + sermonsHtml(c.id)
+      + '</div>'
+
+      + '<div class="det-section">'
+      + '<h3 class="detail-sub">From Facebook <span class="sync-badge mini">Page Plugin</span></h3>'
+      + fbPluginHtml(c.id)
+      + '</div>'
+
+      + '<div class="det-section">'
+      + '<h3 class="detail-sub">Community photos</h3>'
+      + photosHtml(c.id)
+      + '</div>'
+
+      + '<div class="det-section">'
+      + '<h3 class="detail-sub">Community board</h3>'
+      + boardHtml(c.id)
+      + '</div>'
+
+      + '<div class="det-section">'
+      + '<h3 class="detail-sub">Give</h3>'
+      + giveCardHtml(c)
+      + '</div>'
+
+      + '<p class="sim-note" style="margin-top:2rem;">Sermons, bulletin, photos, and board are simulated stand-ins. Production wires each to the church\'s own source (YouTube/SoundCloud, weekly bulletin PDF, Instagram or self-hosted gallery, Breeze or FB group for the board). Facebook posts come from the simulated stream — production replaces this section with Meta\'s Page Plugin iframe.</p>'
+
+      + '<p class="detail-foot"><a href="#contact">Get in touch with The Hive →</a></p>'
+      + '</div>';
+  }
+
+  function route() {
+    var h = location.hash;
+    var m = h.match(/^#church\/(.+)$/);
+    if (m) {
+      renderDetail(m[1]);
+      mainEl.hidden = true; detailEl.hidden = false;
+      window.scrollTo(0, 0);
+    } else {
+      detailEl.hidden = true; mainEl.hidden = false;
+      if (h && h.length > 1) {
+        var target = document.getElementById(h.slice(1));
+        if (target) { target.scrollIntoView(); }
+      }
+    }
+  }
+
+  function setAdmin(v) {
+    isAdmin = v;
+    if (v) { sessionStorage.setItem('hive_admin', '1'); } else { sessionStorage.removeItem('hive_admin'); }
+    adminBar.hidden = !v;
+    signinLink.textContent = v ? 'Signed in' : 'Sign in';
+    if (v) { updateBreezeStatus(); }
+    renderCards();
+    if (!detailEl.hidden) { var m = location.hash.match(/^#church\/(.+)$/); if (m) { renderDetail(m[1]); } }
+  }
+
+  function openEdit(id) {
+    var c = find(id); if (!c) { return; }
+    document.getElementById('edit-id').value = c.id;
+    document.getElementById('edit-name').value = c.name;
+    document.getElementById('edit-description').value = c.description;
+    document.getElementById('edit-hosts').value = c.hosts;
+    document.getElementById('edit-when').value = c.when;
+    document.getElementById('edit-where').value = c.where;
+    editModal.classList.add('open');
+  }
+
+  // --- simulated Breeze integration (read path) ---
+  // Mock "Breeze accounts" — one per church (Q9/Q10 unknown; modeled as three).
+  var BREEZE_PEOPLE = [
+    { church: 'green-tree', name: 'Andrew Bumstead', role: 'Lead Pastor', email: 'thehivechurch@gmail.com' },
+    { church: 'green-tree', name: 'Norma Bumstead', role: 'Community Care', email: 'thehivechurch@gmail.com' },
+    { church: 'spring', name: 'Rotating weekly team', role: 'Weekly roster', email: 'thehivechurch@gmail.com' },
+    { church: 'corpus', name: 'Samuel Stumbo', role: 'Pastor', email: 'corpuschristimail@proton.me' },
+    { church: 'corpus', name: 'Kalea Stumbo', role: 'Families & Discipleship', email: 'corpuschristimail@proton.me' }
+  ];
+
+  var lastSync = null;
+  var syncing = false;
+
+  function pad(n) { return n < 10 ? '0' + n : '' + n; }
+  function accentOf(ch) { return ch === 'green-tree' ? 'green' : ch; }
+  function timeStr(d) { var h = d.getHours(), m = d.getMinutes(), ap = h >= 12 ? 'PM' : 'AM'; h = h % 12 || 12; return h + ':' + pad(m) + ' ' + ap; }
+  function fmtDate(d) {
+    var days = ['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat'];
+    var mons = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
+    return days[d.getDay()] + ', ' + mons[d.getMonth()] + ' ' + d.getDate();
+  }
+
+  // Expand one recurring midweek activity onto a given date (splits a leading time off the title).
+  function activityEvent(a, dateObj) {
+    var m = (a.main || '').match(/^(\d[\d:–\-]*\s?(?:am|pm))\s+(.+)$/i);
+    return { church: 'hive', kind: 'activity', title: m ? m[2] : a.main, time: m ? m[1] : '', location: a.loc, date: new Date(dateObj) };
+  }
+  function weekStart(d) { var s = new Date(d); s.setHours(0, 0, 0, 0); s.setDate(s.getDate() - s.getDay()); return s; }
+  function keyOf(d) { return d.getFullYear() + '-' + pad(d.getMonth() + 1) + '-' + pad(d.getDate()); }
+  function timeRank(t) {
+    var m = (t || '').match(/(\d+):(\d+)\s*(a|p)/i);
+    if (!m) { return 9999; }
+    return ((+m[1] % 12) + (/p/i.test(m[3]) ? 12 : 0)) * 60 + (+m[2]);
+  }
+  function groupByDay(evts) {
+    var map = {};
+    evts.forEach(function (e) { var k = keyOf(e.date); (map[k] = map[k] || []).push(e); });
+    return map;
+  }
+  function byDate(a, b) { return (a.date - b.date) || (timeRank(a.time) - timeRank(b.time)); }
+
+  // One Sunday's recurring gatherings — shared by the list + grid views.
+  function sundayEvents(sun) {
+    var out = [];
+    if (sun.getDate() <= 7) {
+      out.push({ church: 'all', title: 'All-Hive Gathering (shared meal)', date: new Date(sun), time: '5:00 p.m.', location: 'Host church — see announcements' });
+    }
+    out.push({ church: 'spring', title: 'The Spring — Sunday gathering', date: new Date(sun), time: '10:00 a.m.', location: 'HOVHOP, 2555 NW Highland Dr., Corvallis' });
+    out.push({ church: 'green-tree', title: 'Green Tree — Sunday gathering', date: new Date(sun), time: '4:00 p.m.', location: '7th Day Adventist Hall, Corvallis' });
+    out.push({ church: 'corpus', title: 'Corpus Christi — Sunday gathering', date: new Date(sun), time: '4:30 p.m.', location: "Tim & Angie's, 271 N 20th Pl., Philomath" });
+    return out;
+  }
+  function festivalEvent() {
+    var ft = new Date(); ft.setHours(0, 0, 0, 0); ft.setDate(ft.getDate() + 24);
+    return { church: 'all', title: 'Festival of Tents — planning night', date: ft, time: '6:30 p.m.', location: 'The Spring' };
+  }
+  function approvedAsEvents() {
+    var out = [];
+    approvedEvents.forEach(function (e) {
+      var p = (e.date || '').split('-');
+      if (p.length !== 3) { return; }
+      out.push({ church: e.church, title: e.title, date: new Date(+p[0], +p[1] - 1, +p[2]), time: e.time, location: e.location, source: e.source || 'community' });
+    });
+    return out;
+  }
+
+  // List view: everything in the next four weeks — one calendar source feeds all views.
+  function buildEvents() {
+    var today = new Date(); today.setHours(0, 0, 0, 0);
+    var end = new Date(today); end.setDate(end.getDate() + 27);
+    return eventsInRange(today, end);
+  }
+
+  // Grid views: every event whose date falls inside [start, end] (inclusive).
+  function eventsInRange(start, end) {
+    var evts = [];
+    var d = weekStart(start);
+    while (d <= end) {
+      sundayEvents(d).forEach(function (e) { if (e.date >= start && e.date <= end) { evts.push(e); } });
+      d = new Date(d); d.setDate(d.getDate() + 7);
+    }
+    // recurring midweek activities, expanded day-by-day across the range
+    var ad = new Date(start); ad.setHours(0, 0, 0, 0);
+    while (ad <= end) {
+      var dow = ad.getDay();
+      activities.forEach(function (a) { if (a.dow === dow) { evts.push(activityEvent(a, ad)); } });
+      ad = new Date(ad); ad.setDate(ad.getDate() + 1);
+    }
+    var ft = festivalEvent();
+    if (ft.date >= start && ft.date <= end) { evts.push(ft); }
+    approvedAsEvents().forEach(function (e) { if (e.date >= start && e.date <= end) { evts.push(e); } });
+    evts.sort(byDate);
+    return evts;
+  }
+
+  // Stable lookup of the events currently on screen, keyed by evKey, so a click
+  // (event detail) or the "Post to Facebook" button can recover the full event
+  // object. Reset by renderCal() before each view renders; populated by the list
+  // renderer and by chip() for the week/month grids.
+  var evIndex = {};
+  function evAttr(k) { return esc(k).replace(/"/g, '&quot;'); }
+  function renderCalendar(evts) {
+    var el = document.getElementById('breezeCal');
+    el.className = 'cal-list';
+    if (!evts.length) { el.innerHTML = '<div class="cal-empty">No upcoming events.</div>'; return; }
+    el.innerHTML = evts.map(function (e) {
+      var a = accentOf(e.church);
+      var label = e.church === 'all' ? 'All Hive'
+        : e.church === 'hive' ? 'Midweek'
+        : e.church === 'green-tree' ? 'Green Tree'
+        : e.church === 'spring' ? 'The Spring' : 'Corpus Christi';
+      var k = evKey(e); evIndex[k] = e;
+      var pushed = isPushed(e);
+      var pushBtn = isAdmin
+        ? '<button type="button" class="cal-push' + (pushed ? ' done' : '') + '" data-push="' + evAttr(k) + '">'
+          + (pushed ? '✓ On Facebook' : '↗ Post to Facebook') + '</button>'
+        : '';
+      return '<div class="cal-item" data-ev="' + evAttr(k) + '">'
+        + '<div class="cal-date"><span class="cal-dow">' + fmtDate(e.date) + '</span><span class="cal-time">' + esc(e.time) + '</span></div>'
+        + '<div class="cal-meta"><span class="cal-dot ' + a + '"></span>'
+        + '<div><div class="cal-title">' + esc(e.title) + (e.source ? ' <span class="cal-flag">' + (e.source === 'facebook' ? 'Facebook' : 'Community') + '</span>' : '') + '</div><div class="cal-loc">' + esc(e.location) + '</div></div></div>'
+        + '<div class="cal-right"><span class="cal-tag ' + a + '">' + label + '</span>' + pushBtn + '</div>'
+        + '</div>';
+    }).join('');
+  }
+
+  // --- calendar view modes (list / week / month) ---
+  var VIEW_KEY = 'hive_cal_view';
+  function loadView() {
+    try { var v = localStorage.getItem(VIEW_KEY); if (v === 'week' || v === 'month' || v === 'list') { return v; } } catch (e) {}
+    return 'week';
+  }
+  var calView = loadView();
+  var calRef = new Date(); calRef.setHours(0, 0, 0, 0);
+  var MONTHS_LONG = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'];
+  var MONS = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
+  var DOWS = ['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat'];
+
+  function chip(e, withTime) {
+    var t = withTime ? '<span class="cal-chip-time">' + esc(e.time) + '</span>' : '';
+    var k = evKey(e); evIndex[k] = e;
+    return '<div class="cal-chip ' + accentOf(e.church) + '" data-ev="' + evAttr(k) + '" title="' + esc(e.title + ' · ' + e.time) + '">' + t + esc(e.title) + '</div>';
+  }
+
+  function renderMonth() {
+    var el = document.getElementById('breezeCal'); el.className = 'cal-grid-wrap';
+    var y = calRef.getFullYear(), m = calRef.getMonth();
+    var first = new Date(y, m, 1), last = new Date(y, m + 1, 0);
+    var gridStart = weekStart(first);
+    var total = Math.ceil((first.getDay() + last.getDate()) / 7) * 7;
+    var endDate = new Date(gridStart); endDate.setDate(endDate.getDate() + total - 1);
+    var map = groupByDay(eventsInRange(gridStart, endDate));
+    var today = new Date(); today.setHours(0, 0, 0, 0);
+    var html = '<div class="cal-grid">';
+    DOWS.forEach(function (d) { html += '<div class="cal-dow-head">' + d + '</div>'; });
+    for (var i = 0; i < total; i++) {
+      var d = new Date(gridStart); d.setDate(d.getDate() + i);
+      var dayEvts = map[keyOf(d)] || [];
+      var chips = '';
+      dayEvts.slice(0, 3).forEach(function (e) { chips += chip(e, false); });
+      if (dayEvts.length > 3) { chips += '<div class="cal-more">+' + (dayEvts.length - 3) + ' more</div>'; }
+      html += '<div class="cal-cell' + (d.getMonth() !== m ? ' muted' : '') + (d.getTime() === today.getTime() ? ' today' : '') + '">'
+        + '<span class="cal-cell-num">' + d.getDate() + '</span>' + chips + '</div>';
+    }
+    el.innerHTML = html + '</div>';
+  }
+
+  function renderWeek() {
+    var el = document.getElementById('breezeCal'); el.className = 'cal-grid-wrap';
+    var start = weekStart(calRef), end = new Date(start); end.setDate(end.getDate() + 6);
+    var map = groupByDay(eventsInRange(start, end));
+    var today = new Date(); today.setHours(0, 0, 0, 0);
+    var html = '<div class="cal-grid week">';
+    for (var h = 0; h < 7; h++) {
+      var hd = new Date(start); hd.setDate(hd.getDate() + h);
+      html += '<div class="cal-dow-head' + (hd.getTime() === today.getTime() ? ' today' : '') + '">' + DOWS[h] + ' ' + hd.getDate() + '</div>';
+    }
+    for (var i = 0; i < 7; i++) {
+      var d = new Date(start); d.setDate(d.getDate() + i);
+      var dayEvts = map[keyOf(d)] || [];
+      var chips = dayEvts.length ? dayEvts.map(function (e) { return chip(e, true); }).join('') : '<div class="cal-more">—</div>';
+      html += '<div class="cal-cell' + (d.getTime() === today.getTime() ? ' today' : '') + '">' + chips + '</div>';
+    }
+    el.innerHTML = html + '</div>';
+  }
+
+  function updateViewButtons() {
+    Array.prototype.forEach.call(document.querySelectorAll('#calViews button'), function (b) {
+      b.classList.toggle('active', b.getAttribute('data-view') === calView);
+    });
+  }
+  function updatePeriodLabel() {
+    var el = document.getElementById('calPeriod'); if (!el) { return; }
+    if (calView === 'month') { el.textContent = MONTHS_LONG[calRef.getMonth()] + ' ' + calRef.getFullYear(); return; }
+    var s = weekStart(calRef), e = new Date(s); e.setDate(e.getDate() + 6);
+    var label = MONS[s.getMonth()] + ' ' + s.getDate() + ' – ' + (s.getMonth() === e.getMonth() ? '' : MONS[e.getMonth()] + ' ') + e.getDate();
+    if (s.getFullYear() !== e.getFullYear()) { label += ', ' + e.getFullYear(); }
+    el.textContent = label;
+  }
+
+  function renderCal() {
+    evIndex = {};
+    updateViewButtons();
+    var nav = document.getElementById('calNav');
+    if (calView === 'list') { if (nav) { nav.hidden = true; } renderCalendar(buildEvents()); return; }
+    if (nav) { nav.hidden = false; }
+    if (calView === 'week') { renderWeek(); } else { renderMonth(); }
+    updatePeriodLabel();
+  }
+
+  function shiftPeriod(dir) {
+    if (calView === 'week') { calRef.setDate(calRef.getDate() + dir * 7); }
+    else if (calView === 'month') { calRef.setMonth(calRef.getMonth() + dir); }
+    calRef = new Date(calRef); renderCal();
+  }
+
+  document.getElementById('calViews').addEventListener('click', function (ev) {
+    var b = ev.target.closest('[data-view]'); if (!b) { return; }
+    calView = b.getAttribute('data-view');
+    try { localStorage.setItem(VIEW_KEY, calView); } catch (e) {}
+    calRef = new Date(); calRef.setHours(0, 0, 0, 0);
+    renderCal();
+  });
+  document.getElementById('calPrev').addEventListener('click', function () { shiftPeriod(-1); });
+  document.getElementById('calNext').addEventListener('click', function () { shiftPeriod(1); });
+  document.getElementById('calToday').addEventListener('click', function () { calRef = new Date(); calRef.setHours(0, 0, 0, 0); renderCal(); });
+
+  function personHtml(p) {
+    return '<div class="leader-person"><span class="leader-name">' + esc(p.name) + '</span>'
+      + '<span class="leader-role">' + esc(p.role) + '</span>'
+      + '<a class="leader-mail" href="mailto:' + esc(p.email) + '">' + esc(p.email) + '</a></div>';
+  }
+  function leadersFor(churchId) {
+    var ppl = BREEZE_PEOPLE.filter(function (p) { return p.church === churchId; });
+    if (!ppl.length) { return '<p class="cal-loc">Leadership pending confirmation.</p>'; }
+    return ppl.map(personHtml).join('');
+  }
+  // Leaders now render inside the communities accordion (see renderCards), not a standalone grid.
+
+  function setBadges(text, isSyncing) {
+    ['calSync', 'commSync'].forEach(function (id) {
+      var b = document.getElementById(id);
+      if (b) { b.textContent = text; b.classList.toggle('syncing', !!isSyncing); }
+    });
+  }
+  function updateBreezeStatus(txt) {
+    var el = document.getElementById('breezeStatus');
+    if (el) { el.textContent = txt || ('Breeze: 3 churches connected · synced ' + (lastSync ? timeStr(lastSync) : '—')); }
+  }
+  function renderConnList() {
+    var el = document.getElementById('connList');
+    if (!el) { return; }
+    var accs = [
+      { name: 'Green Tree', accent: 'green' },
+      { name: 'The Spring', accent: 'spring' },
+      { name: 'Corpus Christi', accent: 'corpus' }
+    ];
+    el.innerHTML = accs.map(function (a) {
+      return '<div class="conn-row"><span class="leader-band ' + a.accent + ' conn-bar"></span>'
+        + '<div class="conn-main"><div class="conn-name">' + a.name + ' — Breeze account</div>'
+        + '<div class="conn-sub">API key · connected · last sync ' + (lastSync ? timeStr(lastSync) : '—') + '</div></div>'
+        + '<span class="conn-ok">● Connected</span></div>';
+    }).join('');
+  }
+
+  // Fake network call — resolves after a short delay to feel like a real sync.
+  function breezePull() { return new Promise(function (resolve) { setTimeout(resolve, 750); }); }
+  function syncAll() {
+    if (syncing) { return; }
+    syncing = true;
+    setBadges('Syncing from Breeze…', true);
+    updateBreezeStatus('Breeze: syncing 3 churches…');
+    breezePull().then(function () {
+      lastSync = new Date();
+      renderCal();
+      renderCards();
+      updateFbCount();
+      setBadges('Synced from Breeze · ' + timeStr(lastSync), false);
+      updateBreezeStatus();
+      renderConnList();
+      // refresh detail page leadership if currently open
+      if (!detailEl.hidden) { var m = location.hash.match(/^#church\/(.+)$/); if (m) { renderDetail(m[1]); } }
+      syncing = false;
+    });
+  }
+
+  // --- suggest-an-event + manager review flow ---
+  var submitModal = document.getElementById('submitModal');
+  var reviewModal = document.getElementById('reviewModal');
+
+  function churchLabel(ch) {
+    return ch === 'all' ? 'All Hive' : ch === 'hive' ? 'Midweek' : ch === 'green-tree' ? 'Green Tree' : ch === 'spring' ? 'The Spring' : 'Corpus Christi';
+  }
+  function fmtDateStr(ds) {
+    var p = (ds || '').split('-');
+    if (p.length !== 3) { return ds; }
+    return fmtDate(new Date(+p[0], +p[1] - 1, +p[2]));
+  }
+  function uid() { return 'ev' + Date.now() + Math.floor(Math.random() * 1000); }
+
+  function updateReviewCount() {
+    var c = document.getElementById('reviewCount');
+    if (!c) { return; }
+    c.textContent = submissions.length;
+    c.hidden = submissions.length === 0;
+  }
+
+  function openSubmit() {
+    var f = document.getElementById('submitForm');
+    f.reset(); f.hidden = false;
+    document.getElementById('submitDone').hidden = true;
+    submitModal.classList.add('open');
+  }
+  document.getElementById('suggestBtn').addEventListener('click', openSubmit);
+
+  document.getElementById('submitForm').addEventListener('submit', function (e) {
+    e.preventDefault();
+    submissions.push({
+      id: uid(),
+      church: document.getElementById('ev-church').value,
+      title: document.getElementById('ev-title').value.trim(),
+      date: document.getElementById('ev-date').value,
+      time: document.getElementById('ev-time').value.trim(),
+      location: document.getElementById('ev-loc').value.trim(),
+      description: document.getElementById('ev-desc').value.trim(),
+      submitter: document.getElementById('ev-name').value.trim(),
+      email: document.getElementById('ev-email').value.trim(),
+      submittedAt: new Date().toISOString()
+    });
+    persistSubs();
+    updateReviewCount();
+    this.hidden = true;
+    document.getElementById('submitDone').hidden = false;
+  });
+
+  function renderReview() {
+    var el = document.getElementById('reviewList');
+    if (!el) { return; }
+    if (!submissions.length) { el.innerHTML = '<div class="review-empty">No pending event requests.</div>'; return; }
+    el.innerHTML = submissions.map(function (s) {
+      var src = s.source === 'facebook'
+        ? '<span class="review-src">' + (s.fbKind === 'fb-event' ? '📘 FB event' : '📝 FB post') + (s.fbConfidence ? ' · ' + s.fbConfidence : '') + '</span>'
+        : '<span class="review-src member">🙋 Community</span>';
+      return '<div class="review-item" data-sid="' + s.id + '">'
+        + '<h4>' + esc(s.title) + ' <span class="cal-tag ' + accentOf(s.church) + '">' + churchLabel(s.church) + '</span>' + src + '</h4>'
+        + '<p class="review-meta"><span>📅 ' + fmtDateStr(s.date) + '</span><span>🕑 ' + esc(s.time) + '</span><span>📍 ' + esc(s.location) + '</span></p>'
+        + (s.description ? '<p class="review-desc">' + esc(s.description) + '</p>' : '')
+        + '<p class="review-sub">Submitted by ' + esc(s.submitter) + (s.email ? ' · ' + esc(s.email) : '') + '</p>'
+        + '<div class="review-actions">'
+        + '<button type="button" class="btn-approve" data-approve="' + s.id + '">Approve → Breeze</button>'
+        + '<button type="button" class="btn-decline" data-decline="' + s.id + '">Decline</button>'
+        + '</div></div>';
+    }).join('');
+  }
+
+  function takeSub(id) {
+    for (var i = 0; i < submissions.length; i++) {
+      if (submissions[i].id === id) { return submissions.splice(i, 1)[0]; }
+    }
+    return null;
+  }
+  function approveSub(id) {
+    var s = takeSub(id); if (!s) { return; }
+    approvedEvents.push({ church: s.church, title: s.title, date: s.date, time: s.time, location: s.location, source: s.source || 'community' });
+    persistApproved(); persistSubs();
+    updateReviewCount(); renderReview();
+    // Approving writes the event to Breeze (simulated); the next sync pulls it onto the calendar.
+    syncAll();
+  }
+  function declineSub(id) { takeSub(id); persistSubs(); updateReviewCount(); renderReview(); }
+
+  document.getElementById('reviewList').addEventListener('click', function (e) {
+    var ap = e.target.closest('[data-approve]');
+    var dc = e.target.closest('[data-decline]');
+    if (ap) { approveSub(ap.getAttribute('data-approve')); }
+    else if (dc) { declineSub(dc.getAttribute('data-decline')); }
+  });
+  document.getElementById('reviewBtn').addEventListener('click', function () {
+    renderReview();
+    reviewModal.classList.add('open');
+  });
+
+  // --- events ---
+  accEl.addEventListener('click', function (e) {
+    var editBtn = e.target.closest('[data-edit]');
+    if (editBtn) { e.preventDefault(); openEdit(editBtn.getAttribute('data-edit')); return; }
+    if (e.target.closest('a')) { return; }
+    var head = e.target.closest('.acc-head');
+    if (head) {
+      var item = head.closest('.acc-item');
+      var nowOpen = !item.classList.contains('open');
+      item.classList.toggle('open', nowOpen);
+      head.setAttribute('aria-expanded', nowOpen ? 'true' : 'false');
+    }
+  });
+
+  detailEl.addEventListener('click', function (e) {
+    var editBtn = e.target.closest('[data-edit]');
+    if (editBtn) { e.preventDefault(); openEdit(editBtn.getAttribute('data-edit')); return; }
+    var fundBtn = e.target.closest('[data-fund]');
+    if (fundBtn) { e.preventDefault(); openFundDetail(fundBtn.getAttribute('data-fund')); }
+  });
+
+  document.getElementById('editForm').addEventListener('submit', function (e) {
+    e.preventDefault();
+    var c = find(document.getElementById('edit-id').value);
+    if (c) {
+      c.name = document.getElementById('edit-name').value.trim();
+      c.description = document.getElementById('edit-description').value.trim();
+      c.hosts = document.getElementById('edit-hosts').value.trim();
+      c.when = document.getElementById('edit-when').value.trim();
+      c.where = document.getElementById('edit-where').value;
+      persist();
+      renderCards();
+      if (!detailEl.hidden) { renderDetail(c.id); }
+    }
+    editModal.classList.remove('open');
+  });
+
+  signinLink.addEventListener('click', function (e) {
+    e.preventDefault();
+    if (!isAdmin) { signinModal.classList.add('open'); }
+  });
+
+  document.getElementById('signinForm').addEventListener('submit', function (e) {
+    e.preventDefault();
+    signinModal.classList.remove('open');
+    setAdmin(true);
+  });
+
+  document.getElementById('signoutBtn').addEventListener('click', function () { setAdmin(false); });
+
+  document.getElementById('resetDemo').addEventListener('click', function () {
+    churches = JSON.parse(JSON.stringify(DEFAULTS));
+    persist();
+    submissions = []; approvedEvents = [];
+    persistSubs(); persistApproved();
+    fbIntaken = []; persistFbIntaken();
+    fbPushed = {}; persistPushed();
+    updateReviewCount(); updateFbCount();
+    activities = JSON.parse(JSON.stringify(ACTIVITIES_DEFAULT));
+    persistActivities();
+    renderCards();
+    syncAll();
+    if (!detailEl.hidden) { var m = location.hash.match(/^#church\/(.+)$/); if (m) { renderDetail(m[1]); } }
+  });
+
+  document.getElementById('syncNow').addEventListener('click', syncAll);
+  var syncNow2 = document.getElementById('syncNow2');
+  if (syncNow2) { syncNow2.addEventListener('click', syncAll); }
+  document.getElementById('breezeConns').addEventListener('click', function () {
+    renderConnList();
+    document.getElementById('connModal').classList.add('open');
+  });
+
+  Array.prototype.forEach.call(document.querySelectorAll('.modal'), function (modal) {
+    modal.addEventListener('click', function (e) {
+      if (e.target === modal || e.target.closest('[data-close]')) { modal.classList.remove('open'); }
+    });
+  });
+
+  window.addEventListener('hashchange', route);
+
+  // --- simulated Facebook aggregation (read path, four pages) ---
+  // Mock posts gathered across The Hive + the three churches. Live posts load once
+  // each page is connected; The Hive page URL is known, the three churches' are TBD.
+  var FB_PAGES = {
+    hive:   { name: 'The Hive Communities', initials: 'H',  accent: 'hive',   url: 'https://www.facebook.com/CorvallisHive' },
+    green:  { name: 'Green Tree',            initials: 'GT', accent: 'green',  url: '#' },
+    spring: { name: 'The Spring',            initials: 'TS', accent: 'spring', url: '#' },
+    corpus: { name: 'Corpus Christi',        initials: 'CC', accent: 'corpus', url: '#' }
+  };
+  var FB_POSTS = [
+    { id: 'fb1', page: 'hive',   ago: '2h', likes: 48, comments: 6,
+      text: 'Save the date! Our All-Hive Gathering is coming up — all three churches together for worship, teaching, and a shared meal. Bring a dish to share.',
+      fbEvent: { title: 'All-Hive Gathering', daysFromNow: 6, time: '5:00 p.m.', location: 'Host church — see announcements' } },
+    { id: 'fb2', page: 'spring', ago: '1d', likes: 33, comments: 4,
+      text: 'What a morning. Thank you to everyone who stayed to pray after the gathering — see you all next week!' },
+    { id: 'fb3', page: 'spring', ago: '2d', likes: 41, comments: 9, hintTitle: 'Church picnic',
+      text: 'Mark your calendars — church picnic this Saturday at 2 p.m. at Avery Park, Shelter 3. Bring a side to share!' },
+    { id: 'fb4', page: 'green',  ago: '2d', likes: 21, comments: 2, hintTitle: 'Leaders devo sets',
+      text: 'Leaders — reminder: devo sets Friday 7 a.m. at HOVHOP. Come hungry for the Word.' },
+    { id: 'fb5', page: 'corpus', ago: '3d', likes: 27, comments: 5, hintTitle: 'Kingdom Women',
+      text: 'Kingdom Women meets Tuesday 10 a.m. at Angie\'s in Philomath. New faces welcome — coffee is on us.' },
+    { id: 'fb6', page: 'hive',   ago: '5d', likes: 39, comments: 8,
+      text: 'Festival of Tents planning is underway. If you want to help build something beautiful for the whole Hive, we need you. Details at The Spring.' },
+    { id: 'fb7', page: 'spring', ago: '6d', likes: 52, comments: 3,
+      text: 'Freedom Prayer changes lives. If you have been carrying something heavy, there is a team ready to pray with you — request a session through our page.' },
+    { id: 'fb8', page: 'corpus', ago: '1w', likes: 18, comments: 1,
+      text: 'So grateful for this family. Worship was rich this week.' }
+  ];
+
+  // ---------------------------------------------------------------------------
+  // Facebook → event intake (simulated). Two cases:
+  //  (1) a structured Facebook Event object on a post (p.fbEvent) → exact fields,
+  //      high confidence; (2) a plain post that *reads* like an event → parse
+  //      day/time/place from the text, medium/low confidence.
+  // Detected candidates route into the SAME manager review queue as "Suggest an
+  // event", so a human confirms before anything is written to Breeze + the calendar.
+  // Live version: swap FB_POSTS for a Graph API page-posts pull (per-page admin
+  // token) + a Claude classification call; classifyPost() is the swap point.
+  // ---------------------------------------------------------------------------
+  var FB_INTAKEN_KEY = 'hive_fb_intaken_v1';
+  var fbIntaken = loadJSON(FB_INTAKEN_KEY, []) || [];
+  function persistFbIntaken() { try { localStorage.setItem(FB_INTAKEN_KEY, JSON.stringify(fbIntaken)); } catch (e) {} }
+  function isIntaken(id) { return fbIntaken.indexOf(id) !== -1; }
+  function markIntaken(id) { if (!isIntaken(id)) { fbIntaken.push(id); persistFbIntaken(); } }
+
+  var WEEKDAYS = { sunday: 0, monday: 1, tuesday: 2, wednesday: 3, thursday: 4, friday: 5, saturday: 6 };
+  function dstr(d) { return d.getFullYear() + '-' + pad(d.getMonth() + 1) + '-' + pad(d.getDate()); }
+  function addDaysFromNow(n) { var d = new Date(); d.setHours(0, 0, 0, 0); d.setDate(d.getDate() + n); return d; }
+  function nextWeekdayDate(dow) { var d = new Date(); d.setHours(0, 0, 0, 0); var diff = (dow - d.getDay() + 7) % 7; if (diff === 0) { diff = 7; } d.setDate(d.getDate() + diff); return d; }
+  function fbChurchOf(pageKey) { return pageKey === 'green' ? 'green-tree' : pageKey === 'hive' ? 'all' : pageKey; }
+
+  // Heuristic stand-in for the LLM classifier: structured event → high; else look
+  // for day-of-week + time (+ place) in the text → medium; only one signal → low.
+  function classifyPost(p) {
+    if (p.fbEvent) {
+      var e = p.fbEvent;
+      return { isEvent: true, confidence: 'high', kind: 'fb-event',
+        title: e.title, date: dstr(addDaysFromNow(e.daysFromNow)), time: e.time, location: e.location };
+    }
+    var t = p.text || '';
+    var tm = t.match(/\b(\d{1,2}(:\d{2})?)\s?(a\.?m\.?|p\.?m\.?)/i);
+    var wd = t.match(/\b(Sunday|Monday|Tuesday|Wednesday|Thursday|Friday|Saturday)\b/i);
+    var loc = t.match(/\bat ([A-Z][^.,!?]*?(?:Park|HOVHOP|Hall|Church|House|Philomath|Corvallis|[A-Z][a-z]+'s)[^.,!?]*)/);
+    var hasTime = !!tm, hasDay = !!wd;
+    if (!hasTime && !hasDay) { return { isEvent: false }; }
+    return {
+      isEvent: true,
+      confidence: (hasTime && hasDay) ? 'medium' : 'low',
+      kind: 'fb-post',
+      title: p.hintTitle || t.split(/[.!?—]/)[0].trim().slice(0, 48),
+      date: hasDay ? dstr(nextWeekdayDate(WEEKDAYS[wd[1].toLowerCase()])) : '',
+      time: hasTime ? tm[0].replace(/\s+/g, ' ').trim() : '',
+      location: loc ? loc[1].trim() : ''
+    };
+  }
+
+  // Candidates = not-yet-handled posts the classifier is reasonably sure about
+  // (high/medium only — low-signal posts like a vague "details at The Spring" are
+  // left out so managers aren't buried in maybes).
+  function detectFbEvents() {
+    var out = [];
+    FB_POSTS.forEach(function (p) {
+      if (isIntaken(p.id)) { return; }
+      var c = classifyPost(p);
+      if (c.isEvent && (c.confidence === 'high' || c.confidence === 'medium')) { c.post = p; out.push(c); }
+    });
+    return out;
+  }
+
+  function updateFbCount() {
+    var b = document.getElementById('fbEventsCount');
+    if (!b) { return; }
+    var n = detectFbEvents().length;
+    b.textContent = n; b.hidden = n === 0;
+  }
+
+  function renderFbEvents() {
+    var el = document.getElementById('fbEventList');
+    if (!el) { return; }
+    var cands = detectFbEvents();
+    if (!cands.length) { el.innerHTML = '<div class="review-empty">No new event-like posts detected on Facebook.</div>'; return; }
+    el.innerHTML = cands.map(function (c) {
+      var pg = FB_PAGES[c.post.page];
+      var kindLabel = c.kind === 'fb-event' ? '📘 Facebook event' : '📝 Detected in post';
+      return '<div class="fb-cand" data-pid="' + c.post.id + '">'
+        + '<h4>' + esc(c.title) + ' <span class="src ' + c.confidence + '">' + kindLabel + ' · ' + c.confidence + '</span></h4>'
+        + '<p class="review-meta"><span>📅 ' + (c.date ? fmtDateStr(c.date) : '<em>date?</em>') + '</span>'
+        + '<span>🕑 ' + (esc(c.time) || '<em>time?</em>') + '</span>'
+        + '<span>📍 ' + (esc(c.location) || '<em>location?</em>') + '</span></p>'
+        + '<p class="fb-quote">“' + esc(c.post.text) + '” — ' + esc(pg ? pg.name : 'Facebook') + '</p>'
+        + '<div class="review-actions">'
+        + '<button type="button" class="btn-approve" data-add="' + c.post.id + '">Add to review queue →</button>'
+        + '<button type="button" class="btn-decline" data-ignore="' + c.post.id + '">Ignore</button>'
+        + '</div></div>';
+    }).join('');
+  }
+
+  function fbPostById(id) { for (var i = 0; i < FB_POSTS.length; i++) { if (FB_POSTS[i].id === id) { return FB_POSTS[i]; } } return null; }
+
+  function addFbCandidate(pid) {
+    var p = fbPostById(pid); if (!p) { return; }
+    var c = classifyPost(p);
+    var pg = FB_PAGES[p.page];
+    submissions.push({
+      id: uid(), church: fbChurchOf(p.page),
+      title: c.title, date: c.date, time: c.time, location: c.location, description: '',
+      submitter: (pg ? pg.name : 'Facebook') + ' (Facebook)', email: '',
+      submittedAt: new Date().toISOString(),
+      source: 'facebook', fbKind: c.kind, fbConfidence: c.confidence, fbId: p.id
+    });
+    persistSubs(); markIntaken(pid);
+    updateReviewCount(); updateFbCount(); renderFbEvents(); renderReview();
+  }
+  function ignoreFbCandidate(pid) { markIntaken(pid); updateFbCount(); renderFbEvents(); }
+
+  document.getElementById('fbEventsBtn').addEventListener('click', function () {
+    renderFbEvents();
+    document.getElementById('fbEventModal').classList.add('open');
+  });
+  document.getElementById('fbEventList').addEventListener('click', function (e) {
+    var add = e.target.closest('[data-add]');
+    var ign = e.target.closest('[data-ignore]');
+    if (add) { addFbCandidate(add.getAttribute('data-add')); }
+    else if (ign) { ignoreFbCandidate(ign.getAttribute('data-ignore')); }
+  });
+
+  // ---------------------------------------------------------------------------
+  // Push a calendar event TO Facebook (write path, comms assistant).
+  // Facebook removed general API event creation (only a gated partner program
+  // remains), so this prepares copy-ready details + a deep link for a comms
+  // person to create the Event AS THE PAGE in Meta Business Suite, then tracks
+  // that it was posted. evKey gives each event a stable id across re-renders.
+  // ---------------------------------------------------------------------------
+  var FB_PUSHED_KEY = 'hive_fb_pushed_v1';
+  var fbPushed = loadJSON(FB_PUSHED_KEY, {}) || {};
+  function persistPushed() { try { localStorage.setItem(FB_PUSHED_KEY, JSON.stringify(fbPushed)); } catch (e) {} }
+  function evKey(e) { return keyOf(e.date) + '|' + (e.time || '') + '|' + (e.title || ''); }
+  function isPushed(e) { return !!fbPushed[evKey(e)]; }
+
+  // Which Facebook page an event should be created on. 'all'/'hive'/midweek →
+  // the main Hive page; church-specific events → that church's page.
+  function pushPageOf(church) {
+    if (church === 'green-tree') { return 'green'; }
+    if (church === 'spring' || church === 'corpus') { return church; }
+    return 'hive';
+  }
+
+  // Build the long-form date/time string a comms person pastes into Facebook.
+  function pushWhen(e) {
+    var d = e.date;
+    var DOW = ['Sunday','Monday','Tuesday','Wednesday','Thursday','Friday','Saturday'];
+    return DOW[d.getDay()] + ', ' + MONTHS_LONG[d.getMonth()] + ' ' + d.getDate() + ', ' + d.getFullYear()
+      + (e.time ? ' · ' + e.time : '');
+  }
+
+  // Share an event to WhatsApp. The API cannot post into existing group chats,
+  // so this builds a ready-to-send message + a wa.me link that opens WhatsApp
+  // with the text prefilled; the comms person picks the group and sends.
+  function waMessage(e) {
+    var parts = ['*' + e.title + '*', '📅 ' + pushWhen(e)];
+    if (e.location) { parts.push('📍 ' + e.location); }
+    if (e.description) { parts.push('', e.description); }
+    return parts.join('\n');
+  }
+  function openWhatsApp(e) {
+    var msg = waMessage(e);
+    var link = 'https://wa.me/?text=' + encodeURIComponent(msg);
+    var body = document.getElementById('waBody');
+    body.innerHTML =
+      '<p class="push-target">Send this to the right WhatsApp group for <strong>' + esc(churchLabel(e.church)) + '</strong>.</p>'
+      + '<div class="review-item"><h4>' + esc(e.title) + '</h4>'
+      + '<p class="review-meta"><span>📅 ' + esc(pushWhen(e)) + '</span>'
+      + (e.location ? '<span>📍 ' + esc(e.location) + '</span>' : '') + '</p>'
+      + (e.description ? '<p class="review-desc">' + esc(e.description) + '</p>' : '')
+      + '</div>'
+      + '<div class="push-actions">'
+      + '<button type="button" class="btn primary" id="waCopy">Copy message</button>'
+      + '<a class="btn wa" id="waOpen" href="' + esc(link) + '" target="_blank" rel="noopener">Open WhatsApp →</a>'
+      + '</div>'
+      + '<ol class="push-steps">'
+      + '<li>Tap <strong>Open WhatsApp</strong> — the message is pre-filled.</li>'
+      + '<li>Choose the church or small-group chat to send it to.</li>'
+      + '<li>Or tap <strong>Copy message</strong> and paste it into any group.</li>'
+      + '</ol>'
+      + '<textarea id="waText" style="position:absolute;left:-9999px;top:0;" aria-hidden="true">' + esc(msg) + '</textarea>';
+    document.getElementById('waCopy').addEventListener('click', function () {
+      var ta = document.getElementById('waText');
+      ta.style.position = 'static'; ta.select();
+      var done = false; try { done = document.execCommand('copy'); } catch (x) {}
+      ta.style.position = 'absolute';
+      if (navigator.clipboard) { navigator.clipboard.writeText(msg).catch(function () {}); }
+      this.textContent = (done || navigator.clipboard) ? '✓ Copied' : 'Copy failed — select manually';
+    });
+    document.getElementById('waModal').classList.add('open');
+  }
+
+  function openPush(e) {
+    var pageKey = pushPageOf(e.church);
+    var pg = FB_PAGES[pageKey];
+    var linked = pg && pg.url && pg.url !== '#';
+    var pushed = isPushed(e);
+    var details = e.title + '\n' + pushWhen(e) + (e.location ? '\n' + e.location : '')
+      + (e.description ? '\n\n' + e.description : '');
+    // Meta Business Suite event-composer deep link (page-scoped if we know the page).
+    var mbs = 'https://business.facebook.com/latest/content_calendar/event';
+    var body = document.getElementById('fbPushBody');
+    body.innerHTML =
+      '<p class="push-target">Create this Event on <strong>' + esc(pg ? pg.name : 'The Hive') + '</strong>'
+      + (linked ? '' : ' <span class="tbd">page not yet linked</span>') + '</p>'
+      + '<div class="review-item">'
+      + '<h4>' + esc(e.title) + '</h4>'
+      + '<p class="review-meta"><span>📅 ' + esc(pushWhen(e)) + '</span>'
+      + (e.location ? '<span>📍 ' + esc(e.location) + '</span>' : '') + '</p>'
+      + (e.description ? '<p class="review-desc">' + esc(e.description) + '</p>' : '')
+      + '</div>'
+      + '<div class="push-actions">'
+      + '<button type="button" class="btn primary" id="pushCopy">Copy details</button>'
+      + '<a class="btn secondary" id="pushOpen" href="' + (linked ? esc(pg.url) : mbs) + '" target="_blank" rel="noopener">Open ' + (linked ? 'the page' : 'Meta Business Suite') + ' →</a>'
+      + '</div>'
+      + '<ol class="push-steps">'
+      + '<li>Click <strong>Copy details</strong> (title, date/time, location).</li>'
+      + '<li><strong>Open ' + (linked ? 'the page' : 'Meta Business Suite') + '</strong>, then <em>Events → Create event</em>.</li>'
+      + '<li>Paste the details, set the cover image, and publish as the page.</li>'
+      + '<li>Come back and mark it posted below.</li>'
+      + '</ol>'
+      + '<div class="push-mark">'
+      + (pushed
+          ? '<span class="push-done">✓ Marked as posted to Facebook</span>'
+            + '<button type="button" class="btn secondary" id="pushUnmark">Undo</button>'
+          : '<button type="button" class="btn primary" id="pushMark">✓ Mark as posted to Facebook</button>')
+      + '</div>'
+      + '<textarea id="pushDetails" style="position:absolute;left:-9999px;top:0;" aria-hidden="true">' + esc(details) + '</textarea>';
+
+    document.getElementById('pushCopy').addEventListener('click', function () {
+      var ta = document.getElementById('pushDetails');
+      ta.style.position = 'static'; ta.select();
+      var done = false; try { done = document.execCommand('copy'); } catch (x) {}
+      ta.style.position = 'absolute';
+      if (navigator.clipboard) { navigator.clipboard.writeText(details).catch(function () {}); }
+      this.textContent = done || navigator.clipboard ? '✓ Copied' : 'Copy failed — select manually';
+    });
+    var markBtn = document.getElementById('pushMark');
+    if (markBtn) { markBtn.addEventListener('click', function () { fbPushed[evKey(e)] = { at: new Date().toISOString(), page: pageKey }; persistPushed(); document.getElementById('fbPushModal').classList.remove('open'); renderCal(); }); }
+    var unBtn = document.getElementById('pushUnmark');
+    if (unBtn) { unBtn.addEventListener('click', function () { delete fbPushed[evKey(e)]; persistPushed(); document.getElementById('fbPushModal').classList.remove('open'); renderCal(); }); }
+
+    document.getElementById('fbPushModal').classList.add('open');
+  }
+
+  // Show the full details of a calendar event (works from list, week, or month).
+  function openEventDetail(e) {
+    var a = accentOf(e.church);
+    var srcLine = e.source === 'facebook' ? 'Imported from Facebook'
+      : e.source === 'community' ? 'Community-submitted'
+      : e.kind === 'activity' ? 'Recurring midweek activity'
+      : 'Hive calendar event';
+    var pushed = isPushed(e);
+    var body = document.getElementById('eventDetailBody');
+    body.innerHTML =
+      '<div class="evd-head"><span class="cal-dot ' + a + '"></span>'
+      + '<span class="eyebrow" style="margin:0;">' + esc(churchLabel(e.church)) + '</span></div>'
+      + '<h3 style="margin:0 0 0.25rem;">' + esc(e.title) + '</h3>'
+      + '<dl class="evd-dl">'
+      + '<dt>When</dt><dd>' + esc(fmtDate(e.date)) + (e.time ? ' · ' + esc(e.time) : '') + '</dd>'
+      + (e.location ? '<dt>Where</dt><dd>' + nl(e.location) + '</dd>' : '')
+      + '<dt>Source</dt><dd>' + esc(srcLine)
+      + (e.source === 'facebook' ? ' <span class="cal-flag">Facebook</span>' : e.source === 'community' ? ' <span class="cal-flag">Community</span>' : '')
+      + '</dd></dl>'
+      + (e.description ? '<p class="evd-desc">' + esc(e.description) + '</p>' : '')
+      + (isAdmin
+          ? '<div class="push-mark"><button type="button" class="btn ' + (pushed ? 'secondary' : 'primary') + '" id="detailPush">'
+            + (pushed ? '✓ On Facebook — manage' : '↗ Post to Facebook') + '</button>'
+          + '<button type="button" class="btn wa" id="detailWa">💬 Share to WhatsApp</button></div>'
+          : '');
+    var dp = document.getElementById('detailPush');
+    if (dp) { dp.addEventListener('click', function () { document.getElementById('eventModal').classList.remove('open'); openPush(e); }); }
+    var dw = document.getElementById('detailWa');
+    if (dw) { dw.addEventListener('click', function () { document.getElementById('eventModal').classList.remove('open'); openWhatsApp(e); }); }
+    document.getElementById('eventModal').classList.add('open');
+  }
+
+  document.getElementById('breezeCal').addEventListener('click', function (e) {
+    var pb = e.target.closest('[data-push]');
+    if (pb) { var pe = evIndex[pb.getAttribute('data-push')]; if (pe) { openPush(pe); } return; }
+    var it = e.target.closest('[data-ev]');
+    if (it) { var ev = evIndex[it.getAttribute('data-ev')]; if (ev) { openEventDetail(ev); } }
+  });
+
+  // ---------------------------------------------------------------------------
+  // Giving funds → mission/ministry detail (click a fund chip to learn more).
+  // Foster Parent Support + Sparrow Housing are seeded with REAL content sourced
+  // from the 2019 Hive Handbook. The rest are honest stubs marked "confirm" —
+  // their detail is unknown/stale until the Hive supplies current info. `confirm`
+  // surfaces a visible "verify before publishing" note so nothing stale reads as fact.
+  // ---------------------------------------------------------------------------
+  var FUNDS = {
+    general: { name: 'General Fund', scope: 'general',
+      desc: 'Undesignated giving that supports the whole network — the churches, shared ministries, and wherever the need is greatest. The Hive Leadership Team directs the common fund for needs that are corporate in nature.',
+      confirm: 'Source: 2019 handbook (common-fund description). Confirm current allocation language.' },
+    'green-tree': { name: 'Green Tree', scope: 'church',
+      desc: 'Giving directed to the Green Tree micro-church community.',
+      confirm: 'Per-church designation. Confirm current details with Green Tree leadership.' },
+    spring: { name: 'The Spring', scope: 'church',
+      desc: 'Giving directed to The Spring micro-church community.',
+      confirm: 'Per-church designation. Confirm current details with The Spring leadership.' },
+    corpus: { name: 'Corpus Christi', scope: 'church',
+      desc: 'Giving directed to the Corpus Christi micro-church community.',
+      confirm: 'Per-church designation. Confirm current details with Corpus Christi leadership.' },
+    festival: { name: 'Festival of Tents', scope: 'general',
+      desc: 'Supports the Hive’s Festival of Tents gathering.',
+      confirm: 'Not described in the 2019 handbook. Needs a current description from the Hive.' },
+    foster: { name: 'Foster Parent Support Initiative', scope: 'local',
+      desc: 'Comes alongside foster families and the social workers who serve them, meeting practical needs of children in foster care. A full-time Foster Family Support "Lead" supports ~10–12 families — acting as scheduler, encourager, baby-sitter, driver — providing respite, cleaning, prayer, transportation, and meals.',
+      partners: 'Every Child · Love INC', area: 'Linn & Benton Counties (Corvallis & Philomath)',
+      scripture: '"Father to the fatherless… sets the lonely in families."',
+      confirm: 'Sourced from the 2019 handbook (p36). Confirm the program is still active and staffed before publishing.' },
+    shiloh: { name: 'Shiloh Houses', scope: 'local',
+      desc: 'A housing ministry helping financially-insecure families find and retain housing — short-term housing (a month to a year) paired with required life-skills training (finances, job skills, parenting, counseling). Initial focus: two-parent and single-parent families.',
+      partners: 'Love INC + local churches', area: 'Corvallis',
+      scripture: '"Even the sparrow has found a home…" (Psalm 84:3)',
+      confirm: 'NAMING MISMATCH: the 2019 handbook calls this "Sparrow Housing" — "Shiloh Houses" appears nowhere in it. The description above is Sparrow Housing’s. Confirm the current name and details with the Hive before publishing.' },
+    cambodia: { name: 'Cambodia', scope: 'global',
+      desc: 'Supports the Hive’s mission engagement in Cambodia — part of the call to send workers to least-reached places.',
+      confirm: 'Cambodia is named in the 2019 handbook’s mission map, but specifics (who is sent, current projects) need confirming.' },
+    dubai: { name: 'Dubai', scope: 'global',
+      desc: 'Supports the Hive’s mission engagement connected to Dubai.',
+      confirm: 'Not in the 2019 handbook — a newer mission focus. Needs a current description and the people involved.' },
+    seagren: { name: 'Bill & Jenny Seagren', scope: 'global',
+      desc: 'Supports missionaries Bill & Jenny Seagren.',
+      confirm: 'Not in the 2019 handbook — newer missionary support. Confirm field, sending status, and how to give.' }
+  };
+  var FUND_SCOPE_LABEL = { local: 'Local mission', global: 'Global mission', church: 'Micro-church', general: 'General' };
+
+  function openFundDetail(key) {
+    var f = FUNDS[key]; if (!f) { return; }
+    var body = document.getElementById('fundBody');
+    body.innerHTML =
+      '<span class="eyebrow" style="margin:0;">Giving · designate your gift</span>'
+      + '<h3 style="margin:0.25rem 0 0;">' + esc(f.name)
+      + '<span class="fund-scope ' + f.scope + '">' + esc(FUND_SCOPE_LABEL[f.scope] || '') + '</span></h3>'
+      + '<p class="fund-desc">' + esc(f.desc) + '</p>'
+      + ((f.partners || f.area || f.scripture)
+          ? '<dl class="fund-dl">'
+            + (f.area ? '<dt>Where</dt><dd>' + esc(f.area) + '</dd>' : '')
+            + (f.partners ? '<dt>Partners</dt><dd>' + esc(f.partners) + '</dd>' : '')
+            + (f.scripture ? '<dt>Heart</dt><dd><em>' + esc(f.scripture) + '</em></dd>' : '')
+            + '</dl>'
+          : '')
+      + '<a href="https://hive.breezechms.com/give/online" target="_blank" rel="noopener" class="btn primary" style="margin-top:0.5rem;">Give to ' + esc(f.name) + ' →</a>'
+      + (f.confirm ? '<p class="fund-confirm">⚠️ ' + esc(f.confirm) + '</p>' : '');
+    document.getElementById('fundModal').classList.add('open');
+  }
+
+  var fundListEl = document.getElementById('fundList');
+  if (fundListEl) {
+    fundListEl.addEventListener('click', function (e) {
+      var li = e.target.closest('[data-fund]');
+      if (li) { openFundDetail(li.getAttribute('data-fund')); }
+    });
+  }
+
+  // --- verse of the day ---
+  // Rotates one verse per day, deterministic by local date so every visitor sees
+  // the same verse on a given day and a new one tomorrow. The list is intentionally
+  // weighted heavy toward the words of Jesus (j:true → red-letter); supporting verses
+  // from the wider Bible fill the rest. Sequential daily indexing preserves that weighting.
+  // Wording is a recognizable, license-safe rendering for the mockup — confirm the
+  // church's preferred translation before launch (see README). References stay verbatim
+  // so swapping translation text is a one-field edit.
+  var VERSES = [
+    { r: 'John 14:6', j: true, t: 'I am the way and the truth and the life. No one comes to the Father except through me.' },
+    { r: 'Proverbs 3:5–6', j: false, t: 'Trust in the Lord with all your heart and lean not on your own understanding; in all your ways submit to him, and he will make your paths straight.' },
+    { r: 'Matthew 11:28', j: true, t: 'Come to me, all you who are weary and burdened, and I will give you rest.' },
+    { r: 'Psalm 23:1', j: false, t: 'The Lord is my shepherd, I lack nothing.' },
+    { r: 'John 8:12', j: true, t: 'I am the light of the world. Whoever follows me will never walk in darkness, but will have the light of life.' },
+    { r: 'Jeremiah 29:11', j: false, t: 'For I know the plans I have for you, declares the Lord, plans to prosper you and not to harm you, plans to give you hope and a future.' },
+    { r: 'John 13:34', j: true, t: 'A new command I give you: Love one another. As I have loved you, so you must love one another.' },
+    { r: 'Philippians 4:13', j: false, t: 'I can do all this through him who gives me strength.' },
+    { r: 'Matthew 6:33', j: true, t: 'Seek first the kingdom of God and his righteousness, and all these things will be given to you as well.' },
+    { r: 'Isaiah 40:31', j: false, t: 'But those who hope in the Lord will renew their strength. They will soar on wings like eagles; they will run and not grow weary, they will walk and not be faint.' },
+    { r: 'John 15:5', j: true, t: 'I am the vine; you are the branches. If you remain in me and I in you, you will bear much fruit; apart from me you can do nothing.' },
+    { r: 'Romans 8:28', j: false, t: 'And we know that in all things God works for the good of those who love him, who have been called according to his purpose.' },
+    { r: 'John 16:33', j: true, t: 'In this world you will have trouble. But take heart! I have overcome the world.' },
+    { r: 'Psalm 46:1', j: false, t: 'God is our refuge and strength, an ever-present help in trouble.' },
+    { r: 'Matthew 5:14,16', j: true, t: 'You are the light of the world. Let your light shine before others, that they may see your good deeds and glorify your Father in heaven.' },
+    { r: 'Joshua 1:9', j: false, t: 'Be strong and courageous. Do not be afraid; do not be discouraged, for the Lord your God will be with you wherever you go.' },
+    { r: 'John 10:10', j: true, t: 'I have come that they may have life, and have it to the full.' },
+    { r: 'Philippians 4:6–7', j: false, t: 'Do not be anxious about anything, but in every situation, by prayer and petition, with thanksgiving, present your requests to God.' },
+    { r: 'Mark 12:30–31', j: true, t: 'Love the Lord your God with all your heart and with all your soul and with all your mind and with all your strength. Love your neighbor as yourself.' },
+    { r: '1 Corinthians 13:4–5', j: false, t: 'Love is patient, love is kind. It does not envy, it does not boast, it is not proud. It does not dishonor others, it is not self-seeking.' },
+    { r: 'Matthew 7:7', j: true, t: 'Ask and it will be given to you; seek and you will find; knock and the door will be opened to you.' },
+    { r: 'Psalm 119:105', j: false, t: 'Your word is a lamp for my feet, a light on my path.' },
+    { r: 'John 11:25', j: true, t: 'I am the resurrection and the life. The one who believes in me will live, even though they die.' },
+    { r: 'Micah 6:8', j: false, t: 'He has shown you, O mortal, what is good. And what does the Lord require of you? To act justly and to love mercy and to walk humbly with your God.' },
+    { r: 'Matthew 6:34', j: true, t: 'Do not worry about tomorrow, for tomorrow will worry about itself. Each day has enough trouble of its own.' },
+    { r: 'Galatians 5:22–23', j: false, t: 'But the fruit of the Spirit is love, joy, peace, forbearance, kindness, goodness, faithfulness, gentleness and self-control.' },
+    { r: 'John 15:13', j: true, t: 'Greater love has no one than this: to lay down one’s life for one’s friends.' },
+    { r: 'Lamentations 3:22–23', j: false, t: 'Because of the Lord’s great love we are not consumed, for his compassions never fail. They are new every morning; great is your faithfulness.' },
+    { r: 'Luke 6:31', j: true, t: 'Do to others as you would have them do to you.' },
+    { r: 'Psalm 27:1', j: false, t: 'The Lord is my light and my salvation — whom shall I fear? The Lord is the stronghold of my life — of whom shall I be afraid?' },
+    { r: 'John 8:31–32', j: true, t: 'If you hold to my teaching, you are really my disciples. Then you will know the truth, and the truth will set you free.' },
+    { r: 'Matthew 5:6', j: true, t: 'Blessed are those who hunger and thirst for righteousness, for they will be filled.' },
+    { r: 'Luke 9:23', j: true, t: 'Whoever wants to be my disciple must deny themselves and take up their cross daily and follow me.' },
+    { r: 'John 14:27', j: true, t: 'Peace I leave with you; my peace I give you. Do not let your hearts be troubled and do not be afraid.' },
+    { r: 'Matthew 5:9', j: true, t: 'Blessed are the peacemakers, for they will be called children of God.' },
+    { r: 'John 3:16', j: true, t: 'For God so loved the world that he gave his one and only Son, that whoever believes in him shall not perish but have eternal life.' },
+    { r: 'Matthew 18:20', j: true, t: 'For where two or three gather in my name, there am I with them.' },
+    { r: 'John 13:35', j: true, t: 'By this everyone will know that you are my disciples, if you love one another.' },
+    { r: 'Matthew 28:19–20', j: true, t: 'Go and make disciples of all nations. And surely I am with you always, to the very end of the age.' },
+    { r: 'Matthew 5:16', j: true, t: 'In the same way, let your light shine before others, that they may see your good deeds and glorify your Father in heaven.' }
+  ];
+
+  function renderVerse() {
+    var el = document.getElementById('verseText');
+    var cite = document.getElementById('verseCite');
+    if (!el || !cite) { return; }
+    var now = new Date();
+    var dayNum = Math.floor(new Date(now.getFullYear(), now.getMonth(), now.getDate()).getTime() / 86400000);
+    var v = VERSES[((dayNum % VERSES.length) + VERSES.length) % VERSES.length];
+    el.textContent = v.t;
+    el.classList.toggle('jesus', !!v.j);
+    cite.innerHTML = esc(v.r) + (v.j ? '<span class="jesus-tag">The words of Jesus</span>' : '');
+  }
+
+  // --- init ---
+  setAdmin(isAdmin);
+  updateReviewCount();
+  updateFbCount();
+  updateViewButtons();
+  route();
+  syncAll();
+  renderVerse();
+  document.getElementById('year').textContent = new Date().getFullYear();
+})();
+</script>
+
+</body>
+</html>
